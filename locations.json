@@ -1,0 +1,65 @@
+[
+  {
+    "id": "hq-ikoyi",
+    "name": "Kedi Corporate Head Office",
+    "city": "Lagos",
+    "country": "Nigeria",
+    "address": "4B, Agbeke Rotinwa Close, Off Hannat Balogun Street, Dolphin Extension Estate, Ikoyi",
+    "phones": ["+234 1 234 5678"],
+    "type": "Headquarters"
+  },
+  {
+    "id": "apapa-office",
+    "name": "Kedi Apapa Office",
+    "city": "Lagos",
+    "country": "Nigeria",
+    "address": "15, Iganmu road, Sari Iganmu, Amukoko, Ajegunle-Apapa",
+    "phones": ["+234 800 123 4567"],
+    "type": "Training Center"
+  },
+  {
+    "id": "ilorin-center",
+    "name": "Kedi Kwara Center",
+    "city": "Ilorin",
+    "country": "Nigeria",
+    "address": "Par Jay Suites, Prince Bisi Oyedeji Crescent, Off New Yidi Road",
+    "phones": ["+234 900 111 2222"],
+    "type": "Regional Office"
+  },
+  {
+    "id": "akure-center",
+    "name": "Kedi Ondo Center",
+    "city": "Akure",
+    "country": "Nigeria",
+    "address": "118, Hospital Road, Opposite Aquinas College",
+    "phones": ["+234 700 333 4444"],
+    "type": "Service Center"
+  },
+  {
+    "id": "enugu-center",
+    "name": "Kedi Enugu Center",
+    "city": "Enugu",
+    "country": "Nigeria",
+    "address": "116 Nike Road, Opposite Grand Palace Hotel, Abakpa-Nike",
+    "phones": ["+234 811 555 6666"],
+    "type": "Regional Office"
+  },
+  {
+    "id": "ghana-vitanature",
+    "name": "Vitanature Healthcare (Kedi Ghana)",
+    "city": "Accra",
+    "country": "Ghana",
+    "address": "Plot 12, Spintex Road, Accra",
+    "phones": ["+233 24 123 4567"],
+    "type": "International Branch"
+  },
+  {
+    "id": "usa-branch",
+    "name": "Vitanature International Inc.",
+    "city": "Los Angeles",
+    "country": "USA",
+    "address": "Kedi Healthcare USA Subsidiary, LA",
+    "phones": ["+1 323 111 2222"],
+    "type": "International Branch"
+  }
+]

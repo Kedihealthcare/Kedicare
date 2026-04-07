@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedi Healthcare Combo Packs - Complete Health Solutions</title>
+
+    <!-- OpenGraph Meta Tags for WhatsApp Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kedi Healthcare Combo Packs - Complete Health Solutions">
+    <meta property="og:description"
+        content="Complete health solutions for every challenge. Get combo packs for stress relief, joint pain, digestive health, and more. Fast delivery!">
+    <meta property="og:image" content="https://your-domain.com/images/kedi-combo-packs.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://your-domain.com/combo-packs">
+    <meta property="og:site_name" content="Kedi Health Solutions">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --secondary: #10b981;
+            --accent: #8b5cf6;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --info: #3b82f6;
+            --dark: #1e293b;
+            --light: #f1f5f9;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
+            --radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header-content {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 36px;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .header-title {
+            font-size: 42px;
+            font-weight: bold;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .header-subtitle {
+            font-size: 20px;
+            color: #64748b;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Filter Section */
+        .filter-section {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .filter-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--dark);
+        }
+
+        .filter-options {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid var(--border);
+            border-radius: 25px;
+            background: var(--white);
+            color: var(--dark);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        /* Challenge Cards Grid */
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .challenge-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .challenge-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .challenge-header {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .challenge-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            backdrop-filter: blur(10px);
+        }
+
+        .challenge-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .challenge-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .challenge-subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .challenge-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .challenge-stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .challenge-body {
+            padding: 30px;
+        }
+
+        .challenge-description {
+            color: #64748b;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .symptoms-list {
+            margin-bottom: 25px;
+        }
+
+        .symptoms-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .symptoms-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .symptom-tag {
+            background: var(--light);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+
+        .packs-list {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .packs-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pack-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pack-item:last-child {
+            border-bottom: none;
+        }
+
+        .pack-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .pack-info {
+            flex: 1;
+        }
+
+        .pack-name {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+
+        .pack-benefits {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .pack-price {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .challenge-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-combo {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, var(--success), var(--secondary));
+            color: var(--white);
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .btn-combo:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+        }
+
+        .btn-details {
+            padding: 15px;
+            background: var(--light);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-details:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Features Section */
+        .features-section {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .features-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .features-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .features-subtitle {
+            font-size: 18px;
+            color: #64748b;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: var(--white);
+            margin: 0 auto 20px;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .testimonials-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 25px;
+            position: relative;
+        }
+
+        .testimonial-quote {
+            font-size: 18px;
+            color: var(--dark);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 2px;
+        }
+
+        .author-date {
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .rating {
+            display: flex;
+            gap: 2px;
+            color: var(--warning);
+        }
+
+        /* Cart Modal */
+        .cart-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cart-modal.active {
+            display: flex;
+        }
+
+        .cart-content {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .cart-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .close-cart {
+            background: var(--light);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: var(--transition);
+        }
+
+        .close-cart:hover {
+            background: var(--danger);
+            color: var(--white);
+            transform: rotate(90deg);
+        }
+
+        .cart-items {
+            margin-bottom: 30px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: var(--light);
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .cart-item-image {
+            width: 60px;
+            height: 60px;
+            background: var(--white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-name {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .cart-item-price {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .qty-btn {
+            width: 30px;
+            height: 30px;
+            border: 1px solid var(--border);
+            background: var(--white);
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .qty-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .cart-summary {
+            padding-top: 20px;
+            border-top: 2px solid var(--border);
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            font-size: 16px;
+        }
+
+        .summary-row.total {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary);
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--success), var(--secondary));
+            color: var(--white);
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .checkout-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            transition: var(--transition);
+            z-index: 1000;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--dark);
+            color: var(--white);
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            display: none;
+            animation: slideInUp 0.3s ease;
+            z-index: 2000;
+            min-width: 300px;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translate(-50%, 100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        .toast.show {
+            display: block;
+        }
+
+        .toast.success {
+            background: var(--success);
+        }
+
+        .toast-icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .header-title {
+                font-size: 32px;
+            }
+
+            .challenges-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-content {
+                padding: 30px 20px;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">🏥</div>
+                    Kedi Healthcare
+                </div>
+                <h1 class="header-title">Complete Health Combo Packs</h1>
+                <p class="header-subtitle">Comprehensive solutions for every health challenge. Get everything you need
+                    in one convenient pack!</p>
+            </div>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Health Challenges</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24</span>
+                    <span class="stat-label">Solution Packs</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">30%</span>
+                    <span class="stat-label">Average Savings</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <div class="filter-header">
+                <h3 class="filter-title">Filter by Health Challenge</h3>
+            </div>
+            <div class="filter-options">
+                <button class="filter-btn active" onclick="filterChallenges('all')">All Challenges</button>
+                <button class="filter-btn" onclick="filterChallenges('stress')">Stress & Anxiety</button>
+                <button class="filter-btn" onclick="filterChallenges('pain')">Pain Relief</button>
+                <button class="filter-btn" onclick="filterChallenges('digestive')">Digestive Health</button>
+                <button class="filter-btn" onclick="filterChallenges('energy')">Energy & Vitality</button>
+                <button class="filter-btn" onclick="filterChallenges('immunity')">Immunity Boost</button>
+                <button class="filter-btn" onclick="filterChallenges('sleep')">Sleep Better</button>
+                <button class="filter-btn" onclick="filterChallenges('women')">Women's Health</button>
+                <button class="filter-btn" onclick="filterChallenges('men')">Men's Health</button>
+            </div>
+        </section>
+
+        <!-- Health Challenges Grid -->
+        <main class="challenges-grid" id="challenges-grid">
+            <!-- Challenge cards will be inserted here by JavaScript -->
+        </main>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="features-header">
+                <h2 class="features-title">Why Choose Kedi Combo Packs?</h2>
+                <p class="features-subtitle">Get comprehensive health solutions at unbeatable prices</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">Save Big</h3>
+                    <p class="feature-description">Get 30% off when buying combo packs compared to individual products
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Targeted Solutions</h3>
+                    <p class="feature-description">Each pack is scientifically designed to address specific health
+                        challenges</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3 class="feature-title">All-in-One</h3>
+                    <p class="feature-description">Everything you need in one convenient pack - no need to buy
+                        separately</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3 class="feature-title">Expert Formulated</h3>
+                    <p class="feature-description">Created by health experts with proven ingredients and formulas</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="testimonials-header">
+                <h2 class="testimonials-title">Success Stories</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "The Stress Relief Combo Pack completely changed my life! Within 2 weeks, I felt more relaxed
+                        and focused. Best investment in my health!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <div class="author-name">John Doe</div>
+                            <div class="author-date">2 weeks ago</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "Joint Pain Relief Pack worked wonders for my arthritis. I can now move without pain and enjoy
+                        my daily activities again!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <div class="author-name">Sarah Miller</div>
+                            <div class="author-date">1 month ago</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "The Energy & Vitality Pack gave me my life back! I wake up refreshed and have energy throughout
+                        the day. Highly recommended!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MJ</div>
+                        <div class="author-info">
+                            <div class="author-name">Michael Johnson</div>
+                            <div class="author-date">3 weeks ago</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2 class="cart-title">Shopping Cart</h2>
+                <button class="close-cart" onclick="closeCart()">×</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be inserted here -->
+            </div>
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span>$10.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (8%):</span>
+                    <span id="tax">$0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="total">$0.00</span>
+                </div>
+            </div>
+            <button class="checkout-btn" onclick="proceedToCheckout()">
+                <span>💳</span>
+                <span>Proceed to Checkout</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float" onclick="openWhatsAppChat()">
+        📱
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">✅</span>
+        <span id="toast-message">Product added to cart!</span>
+    </div>
+
+    <script>
+        // Health Challenges and Combo Packs Database
+        const healthChallenges = [
+            {
+                id: 'stress_anxiety',
+                category: 'stress',
+                icon: '😰',
+                badge: 'Best Seller',
+                title: 'Stress & Anxiety Relief',
+                subtitle: 'Complete mental wellness solution',
+                description: 'Comprehensive natural formula designed to help you manage stress, anxiety, and promote mental well-being with proven effectiveness.',
+                affectedPeople: '50,000+',
+                successRate: '94%',
+                symptoms: ['Anxiety', 'Stress', 'Sleep Issues', 'Mood Swings', 'Panic Attacks'],
+                packs: [
+                    {
+                        name: 'Stress Relief Pack',
+                        icon: '🌿',
+                        benefits: 'Calming herbs & nutrients',
+                        originalPrice: 129.97,
+                        price: 89.99,
+                        savings: '31%'
+                    },
+                    {
+                        name: 'Sleep Wellness Pack',
+                        icon: '😴',
+                        benefits: 'Promotes restful sleep',
+                        originalPrice: 119.97,
+                        price: 79.99,
+                        savings: '33%'
+                    },
+                    {
+                        name: 'Anxiety Control Pack',
+                        icon: '😊',
+                        benefits: 'Natural anxiety relief',
+                        originalPrice: 109.97,
+                        price: 74.99,
+                        savings: '32%'
+                    }
+                ]
+            },
+            {
+                id: 'joint_pain_relief',
+                category: 'pain',
+                icon: '💪',
+                badge: 'Top Rated',
+                title: 'Joint & Muscle Pain Relief',
+                subtitle: 'Advanced pain management solution',
+                description: 'Powerful combination of natural ingredients designed to reduce inflammation, relieve pain, and improve joint mobility and muscle recovery.',
+                affectedPeople: '75,000+',
+                successRate: '92%',
+                symptoms: ['Joint Pain', 'Arthritis', 'Muscle Aches', 'Back Pain', 'Inflammation'],
+                packs: [
+                    {
+                        name: 'Joint Support Pack',
+                        icon: '🦴',
+                        benefits: 'Reduces joint inflammation',
+                        originalPrice: 149.97,
+                        price: 99.99,
+                        savings: '33%'
+                    },
+                    {
+                        name: 'Back Pain Relief Pack',
+                        icon: '🦴',
+                        benefits: 'Eases back discomfort',
+                        originalPrice: 129.97,
+                        price: 89.99,
+                        savings: '31%'
+                    },
+                    {
+                        name: 'Muscle Relaxant Pack',
+                        icon: '💪',
+                        benefits: 'Relaxes tense muscles',
+                        originalPrice: 99.97,
+                        price: 69.99,
+                        savings: '30%'
+                    }
+                ]
+            },
+            {
+                id: 'digestive_health',
+                category: 'digestive',
+                icon: '🤢',
+                badge: 'Popular',
+                title: 'Digestive Health Complete',
+                subtitle: 'Optimal gut health solution',
+                description: 'Comprehensive digestive support featuring probiotics, enzymes, and natural herbs for optimal gut health and digestive wellness.',
+                affectedPeople: '45,000+',
+                successRate: '89%',
+                symptoms: ['Indigestion', 'Bloating', 'Gas', 'Acid Reflux', 'Constipation'],
+                packs: [
+                    {
+                        name: 'Probiotics Pack',
+                        icon: '🦠',
+                        benefits: 'Restores gut flora',
+                        originalPrice: 119.97,
+                        price: 79.99,
+                        savings: '33%'
+                    },
+                    {
+                        name: 'Digestive Enzyme Pack',
+                        icon: '🧪',
+                        benefits: 'Improves digestion',
+                        originalPrice: 99.97,
+                        price: 69.99,
+                        savings: '30%'
+                    },
+                    {
+                        name: 'Gut Health Pack',
+                        icon: '🌿',
+                        benefits: 'Soothes stomach lining',
+                        originalPrice: 109.97,
+                        price: 74.99,
+                        savings: '32%'
+                    }
+                ]
+            },
+            {
+                id: 'energy_vitality',
+                category: 'energy',
+                icon: '⚡',
+                badge: 'New',
+                title: 'Energy & Vitality Boost',
+                subtitle: 'Recharge your body and mind',
+                description: 'Powerful combination of energy-boosting nutrients and natural energizers for sustained vitality throughout the day without crashes.',
+                affectedPeople: '60,000+',
+                successRate: '91%',
+                symptoms: ['Fatigue', 'Low Energy', 'Mental Fog', 'Exhaustion', 'Daytime Sleepiness'],
+                packs: [
+                    {
+                        name: 'Energy Booster Pack',
+                        icon: '⚡',
+                        benefits: 'Sustained energy release',
+                        originalPrice: 139.97,
+                        price: 94.99,
+                        savings: '32%'
+                    },
+                    {
+                        name: 'Vitality Pack',
+                        icon: '🔋',
+                        benefits: 'Natural energy enhancement',
+                        originalPrice: 119.97,
+                        price: 79.99,
+                        savings: '33%'
+                    },
+                    {
+                        name: 'B12 Energy Pack',
+                        icon: '💊',
+                        benefits: 'Boosts energy naturally',
+                        originalPrice: 99.97,
+                        price: 69.99,
+                        savings: '30%'
+                    }
+                ]
+            },
+            {
+                id: 'immune_defense',
+                category: 'immunity',
+                icon: '🛡️',
+                badge: 'Essential',
+                title: 'Immune Defense Super Pack',
+                subtitle: 'Strengthen your natural defenses',
+                description: 'Advanced immune support formula with vitamins, minerals, and potent herbs to keep you healthy year-round and fight off infections.',
+                affectedPeople: '80,000+',
+                successRate: '95%',
+                symptoms: ['Weak Immunity', 'Frequent Colds', 'Slow Healing', 'Infections', 'Allergies'],
+                packs: [
+                    {
+                        name: 'Immune Booster Pack',
+                        icon: '🛡️',
+                        benefits: 'Strengthens immunity',
+                        originalPrice: 109.97,
+                        price: 74.99,
+                        savings: '32%'
+                    },
+                    {
+                        name: 'Vitamin C Pack',
+                        icon: '🍊',
+                        benefits: 'Antioxidant power',
+                        originalPrice: 89.97,
+                        price: 59.99,
+                        savings: '33%'
+                    },
+                    {
+                        name: 'Zinc Plus Pack',
+                        icon: '💊',
+                        benefits: 'Immune support',
+                        originalPrice: 99.97,
+                        price: 69.99,
+                        savings: '30%'
+                    }
+                ]
+            },
+            {
+                id: 'sleep_better',
+                category: 'sleep',
+                icon: '🌙',
+                badge: 'Recommended',
+                title: 'Sleep Better Complete Pack',
+                subtitle: 'Natural sleep improvement solution',
+                description: 'Comprehensive sleep support with natural sedatives, relaxation herbs, and sleep-regulating nutrients for restful nights.',
+                affectedPeople: '55,000+',
+                successRate: '93%',
+                symptoms: ['Insomnia', 'Poor Sleep', 'Restlessness', 'Daytime Fatigue', 'Night Waking'],
+                packs: [
+                    {
+                        name: 'Sleep Aid Pack',
+                        icon: '😴',
+                        benefits: 'Promotes deep sleep',
+                        originalPrice: 99.97,
+                        price: 69.99,
+                        savings: '30%'
+                    },
+                    {
+                        name: 'Deep Sleep Pack',
+                        icon: '🌙',
+                        benefits: 'Improves sleep quality',
+                        originalPrice: 119.97,
+                        price: 79.99,
+                        savings: '33%'
+                    },
+                    {
+                        name: 'Calming Pack',
+                        icon: '🍵',
+                        benefits: 'Evening relaxation',
+                        originalPrice: 89.97,
+                        price: 59.99,
+                        savings: '33%'
+                    }
+                ]
+            },
+            {
+                id: 'heart_health',
+                category: 'cardiac',
+                icon: '❤️',
+                badge: 'Premium',
+                title: 'Heart Health Protection Pack',
+                subtitle: 'Cardiovascular support formula',
+                description: 'Complete cardiovascular support with heart-healthy nutrients, herbs, and essential fatty acids for optimal heart function.',
+                affectedPeople: '40,000+',
+                successRate: '88%',
+                symptoms: ['High BP', 'Poor Circulation', 'Heart Palpitations', 'Chest Pain'],
+                packs: [
+                    {
+                        name: 'BP Support Pack',
+                        icon: '❤️',
+                        benefits: 'Normalizes blood pressure',
+                        originalPrice: 159.97,
+                        price: 109.99,
+                        savings: '31%'
+                    },
+                    {
+                        name: 'Heart Health Pack',
+                        icon: '🏥',
+                        benefits: 'Supports heart function',
+                        originalPrice: 139.97,
+                        price: 94.99,
+                        savings: '32%'
+                    },
+                    {
+                        name: 'Circulation Pack',
+                        icon: '🔄',
+                        benefits: 'Improves blood flow',
+                        originalPrice: 119.97,
+                        price: 79.99,
+                        savings: '33%'
+                    }
+                ]
+            },
+            {
+                id: 'weight_management',
+                category: 'weight',
+                icon: '⚖️',
+                badge: 'Hot Seller',
+                title: 'Weight Management Pack',
+                subtitle: 'Natural weight loss support',
+                description: 'Comprehensive weight management solution with fat burners, metabolism boosters, and appetite control for healthy weight management.',
+                affectedPeople: '90,000+',
+                successRate: '87%',
+                symptoms: ['Weight Gain', 'Slow Metabolism', 'Cravings', 'Low Energy'],
+                packs: [
+                    {
+                        name: 'Fat Burner Pack',
+                        icon: '🔥',
+                        benefits: 'Burns fat naturally',
+                        originalPrice: 129.97,
+                        price: 89.99,
+                        savings: '31%'
+                    },
+                    {
+                        name: 'Metabolism Pack',
+                        icon: '⚡',
+                        benefits: 'Speeds metabolism',
+                        originalPrice: 109.97,
+                        price: 74.99,
+                        savings: '32%'
+                    },
+                    {
+                        name: 'Appetite Control Pack',
+                        icon: '🥗',
+                        benefits: 'Controls cravings',
+                        originalPrice: 99.97,
+                        price: 69.99,
+                        savings: '30%'
+                    }
+                ]
+            },
+            {
+                id: 'diabetes_support',
+                category: 'diabetes',
+                icon: '🩺',
+                badge: 'Medical',
+                title: 'Diabetes Support Pack',
+                subtitle: 'Blood sugar management solution',
+                description: 'Complete diabetes support with blood sugar regulators, insulin sensitivity enhancers, and nerve support for diabetic wellness.',
+                affectedPeople: '35,000+',
+                successRate: '90%',
+                symptoms: ['High Blood Sugar', 'Diabetes', 'Insulin Resistance', 'Nerve Pain'],
+                packs: [
+                    {
+                        name: 'Blood Sugar Pack',
+                        icon: '🩺',
+                        benefits: 'Regulates blood sugar',
+                        originalPrice: 149.97,
+                        price: 99.99,
+                        savings: '33%'
+                    },
+                    {
+                        name: 'Insulin Pack',
+                        icon: '💊',
+                        benefits: 'Improves insulin response',
+                        originalPrice: 129.97,
+                        price: 89.99,
+                        savings: '31%'
+                    },
+                    {
+                        name: 'Nerve Support Pack',
+                        icon: '🧠',
+                        benefits: 'Protects nerves',
+                        originalPrice: 119.97,
+                        price: 79.99,
+                        savings: '33%'
+                    }
+                ]
+            },
+            {
+                id: 'brain_health',
+                category: 'neurological',
+                icon: '🧠',
+                badge: 'Advanced',
+                title: 'Brain & Memory Boost Pack',
+                subtitle: 'Cognitive enhancement formula',
+                description: 'Advanced brain support with memory enhancers, neuroprotectors, and cognitive boosters for mental clarity and focus.',
+                affectedPeople: '30,000+',
+                successRate: '85%',
+                symptoms: ['Memory Loss', 'Brain Fog', 'Poor Concentration', 'Mental Fatigue'],
+                packs: [
+                    {
+                        name: 'Memory Pack',
+                        icon: '🧠',
+                        benefits: 'Enhances memory',
+                        originalPrice: 139.97,
+                        price: 94.99,
+                        savings: '32%'
+                    },
+                    {
+                        name: 'Focus Pack',
+                        icon: '🎯',
+                        benefits: 'Improves concentration',
+                        originalPrice: 119.97,
+                        price: 79.99,
+                        savings: '33%'
+                    },
+                    {
+                        name: 'Neuroprotection Pack',
+                        icon: '🛡️',
+                        benefits: 'Protects brain cells',
+                        originalPrice: 129.97,
+                        price: 89.99,
+                        savings: '31%'
+                    }
+                ]
+            },
+            {
+                id: 'womens_health',
+                category: 'women',
+                icon: '👩',
+                badge: 'For Women',
+                title: 'Women\'s Health Essential Pack',
+                subtitle: 'Complete female wellness solution',
+                description: 'Comprehensive women\'s health support with hormonal balancers, nutritional support, and female-specific herbs for optimal wellness.',
+                affectedPeople: '25,000+',
+                successRate: '89%',
+                symptoms: ['Hormonal Imbalance', 'PMS', 'Menopause', 'Low Libido'],
+                packs: [
+                    {
+                        name: 'Hormone Balance Pack',
+                        icon: '⚖️',
+                        benefits: 'Balances hormones',
+                        originalPrice: 119.97,
+                        price: 79.99,
+                        savings: '33%'
+                    },
+                    {
+                        name: 'PMS Relief Pack',
+                        icon: '🌸',
+                        benefits: 'Eases PMS symptoms',
+                        originalPrice: 99.97,
+                        price: 69.99,
+                        savings: '30%'
+                    },
+                    {
+                        name: 'Women Vitality Pack',
+                        icon: '💃',
+                        benefits: 'Female energy boost',
+                        originalPrice: 109.97,
+                        price: 74.99,
+                        savings: '32%'
+                    }
+                ]
+            },
+            {
+                id: 'mens_health',
+                category: 'men',
+                icon: '👨',
+                badge: 'For Men',
+                title: 'Men\'s Health Pro Pack',
+                subtitle: 'Complete male wellness solution',
+                description: 'Comprehensive men\'s health support with prostate protectors, vitality boosters, and male-specific nutrients for optimal male health.',
+                affectedPeople: '20,000+',
+                successRate: '86%',
+                symptoms: ['Prostate Issues', 'Low Energy', 'Low Libido', 'Male Wellness'],
+                packs: [
+                    {
+                        name: 'Prostate Pack',
+                        icon: '🏥',
+                        benefits: 'Prostate health support',
+                        originalPrice: 119.97,
+                        price: 79.99,
+                        savings: '33%'
+                    },
+                    {
+                        name: 'Vitality Pack',
+                        icon: '💪',
+                        benefits: 'Male energy boost',
+                        originalPrice: 109.97,
+                        price: 74.99,
+                        savings: '32%'
+                    },
+                    {
+                        name: 'Male Health Pack',
+                        icon: '👨',
+                        benefits: 'Complete male support',
+                        originalPrice: 129.97,
+                        price: 89.99,
+                        savings: '31%'
+                    }
+                ]
+            }
+        ];
+
+        // Cart State
+        let cart = [];
+        let currentFilter = 'all';
+
+        // Initialize the page
+        function init() {
+            renderChallenges();
+        }
+
+        // Render health challenges
+        function renderChallenges(filter = 'all') {
+            const challengesGrid = document.getElementById('challenges-grid');
+            const filteredChallenges = filter === 'all' ? healthChallenges : healthChallenges.filter(challenge => challenge.category === filter);
+
+            challengesGrid.innerHTML = filteredChallenges.map(challenge => `
+                <div class="challenge-card" data-category="${challenge.category}">
+                    <div class="challenge-header">
+                        <span class="challenge-badge">${challenge.badge}</span>
+                        <div class="challenge-icon">${challenge.icon}</div>
+                        <h3 class="challenge-title">${challenge.title}</h3>
+                        <p class="challenge-subtitle">${challenge.subtitle}</p>
+                        <div class="challenge-stats">
+                            <div class="challenge-stat">
+                                <span>👥</span>
+                                <span>${challenge.affectedPeople} helped</span>
+                            </div>
+                            <div class="challenge-stat">
+                                <span>⭐</span>
+                                <span>${challenge.successRate} success</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="challenge-body">
+                        <p class="challenge-description">${challenge.description}</p>
+                        
+                        <div class="symptoms-list">
+                            <div class="symptoms-title">
+                                <span>🎯</span>
+                                <span>Addresses:</span>
+                            </div>
+                            <div class="symptoms-tags">
+                                ${challenge.symptoms.map(symptom => `<span class="symptom-tag">${symptom}</span>`).join('')}
+                            </div>
+                        </div>
+                        
+                        <div class="packs-list">
+                            <div class="packs-title">
+                                <span>📦</span>
+                                <span>Solution Packs (${challenge.packs.length}):</span>
+                            </div>
+                            ${challenge.packs.map(pack => `
+                                <div class="pack-item">
+                                    <div class="pack-icon">${pack.icon}</div>
+                                    <div class="pack-info">
+                                        <div class="pack-name">${pack.name}</div>
+                                        <div class="pack-benefits">${pack.benefits}</div>
+                                    </div>
+                                    <div class="pack-price">$${pack.price}</div>
+                                    <div style="color: var(--danger); font-size: 12px;">Save ${pack.savings}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                        
+                        <div class="challenge-actions">
+                            <button class="btn-combo" onclick="addToCart(${JSON.stringify(challenge).replace(/"/g, "'")})">
+                                <span>🛒</span>
+                                <span>View Packs</span>
+                            </button>
+                            <button class="btn-details" onclick="showDetails('${challenge.id}')">
+                                <span>📋</span>
+                                <span>Learn More</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Filter challenges
+        function filterChallenges(category) {
+            currentFilter = category;
+
+            // Update active filter button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.toLowerCase().includes(category) || (category === 'all' && btn.textContent === 'All Challenges')) {
+                    btn.classList.add('active');
+                }
+            });
+
+            renderChallenges(category);
+        }
+
+        // Add to cart (shows pack selection modal)
+        function addToCart(challenge) {
+            showPackSelection(challenge);
+        }
+
+        // Show pack selection modal
+        function showPackSelection(challenge) {
+            const message = `📦 *KEDI HEALTHCARE - ${challenge.title}*\n\n` +
+                `🎯 Health Challenge: ${challenge.subtitle}\n` +
+                `👥 ${challenge.affectedPeople} people helped\n` +
+                `⭐ ${challenge.successRate} success rate\n\n` +
+                `📦 Available Packs (${challenge.packs.length}):\n` +
+                challenge.packs.map((pack, index) => `${index + 1}. ${pack.name} - $${pack.price} (Save ${pack.savings})`).join('\n') +
+                `\n\n💬 Reply with pack number to order!`;
+
+            openWhatsAppChat(message);
+        }
+
+        // Show details
+        function showDetails(challengeId) {
+            const challenge = healthChallenges.find(c => c.id === challengeId);
+
+            const details = `📋 *${challenge.title} - Detailed Information*\n\n` +
+                `🎯 Challenge: ${challenge.subtitle}\n` +
+                `📝 Description: ${challenge.description}\n\n` +
+                `👥 People Helped: ${challenge.affectedPeople}\n` +
+                `⭐ Success Rate: ${challenge.successRate}\n` +
+                `🎯 Symptoms Addressed:\n` +
+                challenge.symptoms.map((symptom, index) => `${index + 1}. ${symptom}`).join('\n') +
+                `\n\n💯 Contact us for personalized consultation!\n` +
+                `📞 Call: +2348114270136`;
+
+            openWhatsAppChat(details);
+        }
+
+        // WhatsApp chat function
+        function openWhatsAppChat(message) {
+            const whatsappUrl = `https://wa.me/2348114270136?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Cart functions (for direct pack ordering)
+        function orderPack(challengeId, packIndex) {
+            const challenge = healthChallenges.find(c => c.id === challengeId);
+            const pack = challenge.packs[packIndex - 1];
+
+            if (!pack) return;
+
+            const packItem = {
+                ...pack,
+                challengeTitle: challenge.title,
+                challengeIcon: challenge.icon,
+                quantity: 1
+            };
+
+            const existingItem = cart.find(item => item.id === pack.id && item.challengeTitle === challenge.title);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push(packItem);
+            }
+
+            showToast(`✅ ${pack.name} added to cart!`);
+            updateCartUI();
+        }
+
+        // Update cart UI
+        function updateCartUI() {
+            const cartCount = document.getElementById('cart-count');
+            if (cartCount) {
+                cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartCount.style.display = cart.length > 0 ? 'block' : 'none';
+            }
+        }
+
+        // Proceed to checkout
+        function proceedToCheckout() {
+            if (cart.length === 0) {
+                showToast('🛒 Your cart is empty');
+                return;
+            }
+
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const tax = subtotal * 0.08;
+            const total = subtotal + 10 + tax;
+
+            const order = `🛒 *KEDI HEALTHCARE ORDER*\n\n` +
+                `📦 Items (${cart.length}):\n` +
+                cart.map((item, index) =>
+                    `${index + 1}. ${item.challengeTitle}\n` +
+                    `   📦 Pack: ${item.name}\n` +
+                    `   💰 Price: $${item.price}\n` +
+                    `   🔢 Quantity: ${item.quantity}\n`
+                ).join('\n') +
+                `\n💰 Subtotal: $${subtotal.toFixed(2)}\n` +
+                `🚚 Shipping: $10.00\n` +
+                `💳 Tax: $${tax.toFixed(2)}\n` +
+                `💎 Total: $${total.toFixed(2)}\n\n` +
+                `🏪 Thank you for choosing Kedi Healthcare!`;
+
+            openWhatsAppChat(order);
+        }
+
+        // Cart modal functions
+        function openCart() {
+            if (cart.length === 0) {
+                showToast('🛒 Your cart is empty');
+                return;
+            }
+            document.getElementById('cart-modal').classList.add('active');
+            updateCartItems();
+        }
+
+        function closeCart() {
+            document.getElementById('cart-modal').classList.remove('active');
+        }
+
+        function updateCartItems() {
+            const cartItems = document.getElementById('cart-items');
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const tax = subtotal * 0.08;
+            const total = subtotal + 10 + tax;
+
+            cartItems.innerHTML = cart.map(item => `
+                <div class="cart-item">
+                    <div class="cart-item-image">${item.icon || item.challengeIcon}</div>
+                    <div class="cart-item-info">
+                        <div class="cart-item-name">${item.challengeTitle}</div>
+                        <div class="cart-item-name" style="font-size: 14px; color: var(--primary);">${item.name}</div>
+                        <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+                        <div class="cart-item-quantity">
+                            <button class="qty-btn" onclick="updateQuantity('${item.id}', '${item.challengeTitle}', -1)">−</button>
+                            <span>${item.quantity}</span>
+                            <button class="qty-btn" onclick="updateQuantity('${item.id}', '${item.challengeTitle}', 1)">+</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+        }
+
+        function updateQuantity(packId, challengeTitle, change) {
+            const item = cart.find(item => item.id === packId && item.challengeTitle === challengeTitle);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) {
+                    cart = cart.filter(item => !(item.id === packId && item.challengeTitle === challengeTitle));
+                }
+                updateCartItems();
+                updateCartUI();
+            }
+        }
+
+        // Toast notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+
+            toastMessage.textContent = message;
+            toast.classList.add('show');
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Update the addToCart function for better cart management
+        function addToCart(challenge) {
+            // Show pack selection in modal instead of adding directly
+            showPackSelection(challenge);
+        }
+
+        // Add cart count display to header
+        function addCartCountToHeader() {
+            const header = document.querySelector('.header-content');
+            const cartCount = document.createElement('div');
+            cartCount.id = 'cart-count';
+            cartCount.innerHTML = `
+                <div style="position: fixed; top: 20px; right: 20px; z-index: 100;">
+                    <button class="btn-combo" onclick="openCart()" style="position: relative; padding: 12px 20px; border-radius: 25px;">
+                        <span style="font-size: 20px;">🛒</span>
+                        <span style="margin-left: 8px;">Cart (<span id="cart-count-number">0</span>)</span>
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(cartCount);
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', () => {
+            init();
+            addCartCountToHeader();
+
+            // Update cart count when items are added/removed
+            setInterval(() => {
+                const cartCountNumber = document.getElementById('cart-count-number');
+                if (cartCountNumber) {
+                    cartCountNumber.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+                }
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>

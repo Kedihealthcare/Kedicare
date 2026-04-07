@@ -1,0 +1,349 @@
+[
+  {
+    "id": "kedi-v-igor",
+    "name": "Kedi V-Igor",
+    "description": "Supports male stamina and vitality. Formulated with potent herbal extracts to combat fatigue.",
+    "price": 25.00,
+    "image_url": "Vigor essential (4).jpg",
+    "dosage": "2 Capsules twice daily after meals",
+    "symptom_tags": ["fatigue", "low energy", "stamina", "vitality", "men health"]
+  },
+  {
+    "id": "kedi-re-vive",
+    "name": "Kedi Re-Vive",
+    "description": "Premium herbal blend for men's wellness and sexual health performance.",
+    "price": 35.00,
+    "image_url": "Revive.png",
+    "dosage": "1-2 Capsules twice daily",
+    "symptom_tags": ["erectile dysfunction", "performance", "vitality", "sexual health", "men health"]
+  },
+  {
+    "id": "kedi-golden-six",
+    "name": "Kedi Golden Six",
+    "description": "Traditional formula for kidney health, back pain reduction, fibroid support, and reproductive health.",
+    "price": 20.00,
+    "image_url": "Golden six.png",
+    "dosage": "1 Capsule three times daily",
+    "symptom_tags": ["back pain", "kidney", "fatigue", "urinary issues", "systemic balance", "fibroid", "infertility"]
+  },
+  {
+    "id": "kedi-magilim",
+    "name": "Kedi Magilim",
+    "description": "Natural weight management and detox supplement using herbal extracts. Supports healthy metabolism.",
+    "price": 28.00,
+    "image_url": "Magilim.png",
+    "dosage": "4 Capsules three times daily for weight loss",
+    "symptom_tags": ["weight gain", "bloating", "digestive issues", "obesity", "cleanse", "metabolism", "detox"]
+  },
+  {
+    "id": "kedi-eye-clear",
+    "name": "Kedi Eye Beta",
+    "description": "Maintains eye health, improves vision, and relieves eye strain during long screen usage.",
+    "price": 18.50,
+    "image_url": "Eye Beta.png",
+    "symptom_tags": ["blurry vision", "eye strain", "headache", "vision loss", "glaucoma", "cataract"]
+  },
+  {
+    "id": "kedi-constilease",
+    "name": "Kedi Constilease",
+    "description": "Effective relief from constipation and promotes regular bowel movements naturally.",
+    "price": 15.00,
+    "image_url": "Constilease.png",
+    "symptom_tags": ["constipation", "bloating", "digestive issues", "abdominal pain", "hard stools", "pile", "hemorrhoids"]
+  },
+  {
+    "id": "kedi-haemocare",
+    "name": "Kedi Haemocare",
+    "description": "Supports red blood cell production, great for anemia, weakness, and fast recovery.",
+    "price": 22.00,
+    "image_url": "Hemocare.png",
+    "symptom_tags": ["anemia", "weakness", "dizziness", "low energy", "fatigue", "iron deficiency", "blood loss"]
+  },
+  {
+    "id": "kedi-memory-247",
+    "name": "Kedi Memory 24/7",
+    "description": "Enhances memory, cognitive function, and mental clarity for better focus.",
+    "price": 32.00,
+    "image_url": "MEMORY-247.png",
+    "symptom_tags": ["memory loss", "brain fog", "focus", "mental fatigue", "forgetfulness"]
+  },
+  {
+    "id": "kedi-eve-comfort",
+    "name": "Kedi Eve Comfort",
+    "description": "Relieves menstrual pain and discomfort, supporting female reproductive health and hormonal balance.",
+    "price": 19.00,
+    "image_url": "EVE-COMFORT.png",
+    "symptom_tags": ["menstrual pain", "period cramps", "irregular periods", "pre-menstrual syndrome", "female health", "hormonal imbalance"]
+  },
+  {
+    "id": "kedi-diawell",
+    "name": "Kedi Diawell",
+    "description": "Natural herbal formula to support blood sugar regulation and metabolic health.",
+    "price": 40.00,
+    "image_url": "DIAWELL.png",
+    "dosage": "2 Tablets three times daily",
+    "symptom_tags": ["diabetes", "high blood sugar", "frequent urination", "excessive thirst", "metabolism"]
+  },
+  {
+    "id": "kedi-gastrifort",
+    "name": "Kedi Gastrifort",
+    "description": "Eases stomach ulcers, gastritis, and other digestive discomforts.",
+    "price": 24.50,
+    "image_url": "Gastrifort.png",
+    "dosage": "2 Capsules three times daily before meals",
+    "symptom_tags": ["stomach pain", "ulcer", "gastritis", "heartburn", "acid reflux", "digestion"]
+  },
+  {
+    "id": "kedi-multi-vitamin",
+    "name": "Kedi Multi-Vitamin",
+    "description": "Comprehensive daily nutrient support for better immune system and general energy levels.",
+    "price": 12.00,
+    "image_url": "Multi-vitamin.jpg",
+    "symptom_tags": ["general weakness", "low immune system", "vitamin deficiency", "recovery", "daily wellness"]
+  },
+  {
+    "id": "kedi-lycovite",
+    "name": "Kedi Lycovite",
+    "description": "Powerful antioxidant supporting prostate health, anti-aging, and cardiovascular wellness.",
+    "price": 45.00,
+    "image_url": "LYCOVITE.jpg",
+    "dosage": "1 Softgel once daily",
+    "symptom_tags": ["prostate health", "urinary flow", "antioxidant", "heart health", "frequent urination"]
+  },
+  {
+    "id": "kedi-cordy-active",
+    "name": "Kedi Cordy Active",
+    "description": "Traditional respiratory and kidney tonic. Enhances lung function, asthma relief, and immunity.",
+    "price": 38.00,
+    "image_url": "Cordy Active.png",
+    "dosage": "2-3 Capsules three times daily",
+    "symptom_tags": ["cough", "respiratory", "asthma", "lung health", "immunity", "bronchitis"]
+  },
+  {
+    "id": "kedi-reishi",
+    "name": "Kedi Reishi",
+    "description": "The king of herbs for immune modulation, stress relief, liver protection, and longevity.",
+    "price": 42.00,
+    "image_url": "Reishi.png",
+    "dosage": "2-3 Capsules twice daily",
+    "symptom_tags": ["stress", "insomnia", "immune support", "anti-aging", "viral infections", "liver health"]
+  },
+  {
+    "id": "kedi-calmazine",
+    "name": "Kedi Calmazine",
+    "description": "Calcium, Magnesium, and Zinc supplement for strong bones, teeth, and osteoporosis prevention.",
+    "price": 21.00,
+    "image_url": "CALMAZINE.png",
+    "symptom_tags": ["bone pain", "joint pain", "arthritis", "osteoporosis", "calcium deficiency"]
+  },
+  {
+    "id": "kedi-cardibetter",
+    "name": "Kedi Cardibetter",
+    "description": "Premium cardiovascular support for high blood pressure, heart disease, and chest pain.",
+    "price": 36.00,
+    "image_url": "CARDIBETTER222.png",
+    "dosage": "2-3 Capsules twice daily after meals",
+    "symptom_tags": ["high blood pressure", "hypertension", "heart disease", "chest pain", "palpitations", "stroke"]
+  },
+  {
+    "id": "kedi-cello-q10",
+    "name": "Kedi Cello Q10",
+    "description": "Coenzyme Q10 for superior cell energy, hearth health, and powerful antioxidant defense.",
+    "price": 34.00,
+    "image_url": "CELLO Q10.jpg",
+    "symptom_tags": ["heart health", "fatigue", "cellular energy", "cardiovascular", "cholesterol"]
+  },
+  {
+    "id": "kedi-grapemin-e",
+    "name": "Kedi Grapemin-E",
+    "description": "Grape seed extract and Vitamin E for skin health, anti-aging, and circulatory support.",
+    "price": 23.50,
+    "image_url": "GRAPEMIN-E.png",
+    "symptom_tags": ["skin issues", "aging", "wrinkles", "bad circulation", "antioxidant"]
+  },
+  {
+    "id": "kedi-gynapharm",
+    "name": "Kedi Gynapharm",
+    "description": "Female pelvic health, treats PID, staphylococcus, and other gynecological infections.",
+    "price": 29.00,
+    "image_url": "GYNAPHARM.png",
+    "symptom_tags": ["pelvic inflammatory disease", "PID", "vaginal discharge", "infections", "staphylococcus", "itching"]
+  },
+  {
+    "id": "kedi-golden-hypha",
+    "name": "Kedi Golden Hypha",
+    "description": "Advanced immune system booster and supportive therapy for tumors and cancer cells.",
+    "price": 48.00,
+    "image_url": "Golden-Hypha.png",
+    "dosage": "2nd & 3rd phase: 4 capsules twice daily",
+    "symptom_tags": ["tumor", "cancer", "hepatitis", "chronic infection", "low immunity", "fibroid"]
+  },
+  {
+    "id": "kedi-lirich",
+    "name": "Kedi Lirich",
+    "description": "Liver tonic for fatty liver, hepatitis, and overall liver detoxification.",
+    "price": 27.50,
+    "image_url": "LIRICH.png",
+    "symptom_tags": ["liver damage", "fatty liver", "hepatitis", "jaundice", "detox", "indigestion"]
+  },
+  {
+    "id": "kedi-colon-tea",
+    "name": "Kedi Colon Tea Cleanser",
+    "description": "Herbal tea for colon cleansing, relieving constipation, and digestive health.",
+    "price": 14.00,
+    "image_url": "colon-tea-cleanser.png",
+    "symptom_tags": ["colon cleanse", "constipation", "bloating", "detox", "indigestion"]
+  },
+  {
+    "id": "kedi-refresh-tea",
+    "name": "Kedi Refresh Tea",
+    "description": "Refreshing herbal tea to clear throat, reduce body heat, and improve vision.",
+    "price": 13.00,
+    "image_url": "refresh-tea.png",
+    "symptom_tags": ["sore throat", "fever", "body heat", "cough", "flu"]
+  },
+  {
+    "id": "kedi-vitaprego",
+    "name": "Kedi Vitaprego",
+    "description": "Essential maternal nutrition and prenatal vitamins for pregnant women.",
+    "price": 22.00,
+    "image_url": "VITAPREGO-e1642367642371.png",
+    "symptom_tags": ["pregnancy", "prenatal", "maternal health", "fetal development"]
+  },
+  {
+    "id": "kedi-mv-women",
+    "name": "Kedi MV-Women",
+    "description": "Multivitamin tailored specifically for women's nutritional needs.",
+    "price": 16.00,
+    "image_url": "MV-WOMEN.png",
+    "symptom_tags": ["women daily wellness", "fatigue", "vitamin deficiency", "energy"]
+  },
+  {
+    "id": "kedi-vitagent",
+    "name": "Kedi Vitagent",
+    "description": "Multivitamin tailored specifically for men's nutritional needs and vitality.",
+    "price": 16.00,
+    "image_url": "VITAGENT.png",
+    "symptom_tags": ["men daily wellness", "fatigue", "vitamin deficiency", "energy", "vitality"]
+  },
+  {
+    "id": "pack-100k-prostate",
+    "name": "100K Prostate Health Challenge Pack",
+    "description": "A 30-day intensive pack for prostate enlargement, frequent urination, and men's wellness.",
+    "price": 90.00,
+    "image_url": "LYCOVITE.jpg",
+    "is_pack": true,
+    "products": ["kedi-lycovite", "kedi-golden-six", "kedi-vitagent"],
+    "symptom_tags": ["100k challenge", "prostate issues", "frequent urination", "night urination", "prostate enlargement", "men health"]
+  },
+  {
+    "id": "pack-100k-diabetes",
+    "name": "100K Diabetes & Metabolic Challenge Pack",
+    "description": "Comprehensive protocol to regulate blood sugar, repair metabolic function, and control weight.",
+    "price": 109.50,
+    "image_url": "DIAWELL.png",
+    "is_pack": true,
+    "products": ["kedi-diawell", "kedi-magilim", "kedi-lirich", "kedi-colon-tea"],
+    "symptom_tags": ["100k challenge", "diabetes", "high sugar", "metabolic syndrome", "obesity", "type 2 diabetes"]
+  },
+  {
+    "id": "pack-100k-hypertension",
+    "name": "100K Hypertension & Heart Guard Pack",
+    "description": "Specialized combination to manage high blood pressure, reduce cholesterol, and prevent stroke.",
+    "price": 135.50,
+    "image_url": "CARDIBETTER222.png",
+    "is_pack": true,
+    "products": ["kedi-cardibetter", "kedi-cello-q10", "kedi-grapemin-e", "kedi-golden-six"],
+    "symptom_tags": ["100k challenge", "hypertension", "high blood pressure", "stroke", "heart disease", "palpitations", "cardiovascular"]
+  },
+  {
+    "id": "pack-100k-fibroid-fertility",
+    "name": "100K Fibroid & Fertility Challenge Pack",
+    "description": "Targeted female health pack to shrink fibroids naturally, treat PID, and boost fertility.",
+    "price": 116.00,
+    "image_url": "GYNAPHARM.png",
+    "is_pack": true,
+    "products": ["kedi-gynapharm", "kedi-golden-hypha", "kedi-eve-comfort", "kedi-golden-six"],
+    "symptom_tags": ["100k challenge", "fibroid", "infertility", "ovarian cyst", "blocked fallopian tubes", "PID", "hormonal imbalance"]
+  },
+  {
+    "id": "pack-100k-ulcer",
+    "name": "100K Gastric Ulcer Healing Pack",
+    "description": "Soothes the stomach lining, eradicates H. pylori, and provides permanent relief from gastric ulcers.",
+    "price": 67.50,
+    "image_url": "Gastrifort.png",
+    "is_pack": true,
+    "products": ["kedi-gastrifort", "kedi-reishi", "kedi-calmazine"],
+    "symptom_tags": ["100k challenge", "stomach ulcer", "peptic ulcer", "acid reflux", "gastritis", "severe heart burn"]
+  },
+  {
+    "id": "pack-100k-arthritis",
+    "name": "100K Arthritis & Joint Relief Pack",
+    "description": "Rebuilds cartilage, reduces joint inflammation, and relieves arthritis pain effectively.",
+    "price": 79.00,
+    "image_url": "CALMAZINE.png",
+    "is_pack": true,
+    "products": ["kedi-calmazine", "kedi-golden-six", "kedi-reishi"],
+    "symptom_tags": ["100k challenge", "arthritis", "joint pain", "rheumatism", "waist pain", "osteoporosis"]
+  },
+  {
+    "id": "detox_pack",
+    "name": "100K Full System Detox Pack",
+    "description": "Essential herbal protocol to cleanse the liver, kidneys, and blood from accumulated toxins and waste.",
+    "price": 55.00,
+    "image_url": "Magilim.png",
+    "is_pack": true,
+    "products": ["kedi-magilim", "kedi-lirich", "kedi-colon-tea"],
+    "symptom_tags": ["100k challenge", "detox", "toxic body", "liver cleanse", "blood purification"]
+  },
+  {
+    "id": "pack-100k-infection",
+    "name": "100K Chronic Infection Defense Pack",
+    "description": "Broad-spectrum herbal antiviral and antibacterial protocol for deep-seated chronic infections.",
+    "price": 85.00,
+    "image_url": "Golden-Hypha.png",
+    "is_pack": true,
+    "products": ["kedi-golden-hypha", "kedi-reishi", "kedi-cordy-active"],
+    "symptom_tags": ["100k challenge", "chronic infection", "staph", "low immunity", "virus"]
+  },
+  {
+    "id": "stress_anxiety",
+    "name": "100K Mental Tranquility Pack",
+    "description": "Herbal support to manage cortisol levels, reduce anxiety, and improve restorative sleep naturally.",
+    "price": 45.00,
+    "image_url": "Reishi.png",
+    "is_pack": true,
+    "products": ["kedi-reishi", "kedi-memory-247", "kedi-refresh-tea"],
+    "symptom_tags": ["100k challenge", "anxiety", "insomnia", "stress", "mental fatigue"]
+  },
+  {
+    "id": "heart_health",
+    "name": "100K Heart Vitality Guard Pack",
+    "description": "Complete cardiovascular support to strengthen heart muscles and optimize circulatory blood flow.",
+    "price": 95.00,
+    "image_url": "CARDIBETTER222.png",
+    "is_pack": true,
+    "products": ["kedi-cardibetter", "kedi-cello-q10", "kedi-grapemin-e"],
+    "symptom_tags": ["100k challenge", "heart disease", "palpitations", "poor circulation", "chest pain"]
+  },
+  {
+    "id": "weight_management",
+    "name": "100K Metabolism & Weight Fix Pack",
+    "description": "Highly effective metabolic protocol to accelerate fat burning and control impulsive sugar cravings.",
+    "price": 75.00,
+    "image_url": "Magilim.png",
+    "is_pack": true,
+    "products": ["kedi-magilim", "kedi-cordy-active", "kedi-colon-tea"],
+    "symptom_tags": ["100k challenge", "weight gain", "obesity", "slow metabolism", "cravings"]
+  },
+  {
+    "id": "brain_health",
+    "name": "100K Brain & Memory Recovery Pack",
+    "description": "Advanced neural support protocol to eliminate brain fog, improve cognitive recall, and sharpen focus.",
+    "price": 60.00,
+    "image_url": "MEMORY-247.png",
+    "is_pack": true,
+    "products": ["kedi-memory-247", "kedi-reishi", "kedi-haemocare"],
+    "symptom_tags": ["100k challenge", "memory loss", "brain fog", "focus", "dementia"]
+  }
+]

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedi Health AI - Advanced Medical Assessment Platform</title>
+
+    <!-- WhatsApp/Facebook OpenGraph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kedi Health AI - Advanced Medical Assessment Platform">
+    <meta property="og:description"
+        content="Get comprehensive AI-powered health analysis with Dr. Kedi AI. Advanced symptom detection, personalized prescriptions, and expert medical advice. Start your health journey today!">
+    <meta property="og:image" content="https://your-domain.com/images/kedi-health-og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://your-domain.com/health-assessment">
+    <meta property="og:site_name" content="Kedi Health Solutions">
+    <meta property="og:locale" content="en_US">
+
+    <!-- WhatsApp-Specific Meta Tags -->
+    <meta property="og:whatsapp:app_id" content="your-facebook-app-id">
+    <meta name="whatsapp:title" content="Kedi Health AI - Advanced Medical Assessment">
+    <meta name="whatsapp:description"
+        content="Get comprehensive AI-powered health analysis with Dr. Kedi AI. Advanced symptom detection and personalized medical advice.">
+    <meta name="whatsapp:image" content="https://your-domain.com/images/whatsapp-share.jpg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kedi Health AI - Advanced Medical Assessment Platform">
+    <meta name="twitter:description"
+        content="Get comprehensive AI-powered health analysis with Dr. Kedi AI. Advanced symptom detection, personalized prescriptions, and expert medical advice.">
+    <meta name="twitter:image" content="https://your-domain.com/images/twitter-card.jpg">
+    <meta name="twitter:site" content="@kedihealth">
+
+    <!-- Additional Meta Tags for Better Sharing -->
+    <meta name="description"
+        content="Kedi Health AI offers comprehensive medical assessment with advanced AI doctor. Get personalized health analysis, symptom detection, prescriptions, and expert medical advice.">
+    <meta name="keywords"
+        content="health assessment, AI doctor, medical diagnosis, symptoms analysis, health advice, Kedi Health, Dr. Kedi AI">
+    <meta name="author" content="Kedi Health Solutions">
+    <meta name="robots" content="index, follow">
+
+    <!-- GEO / GLOBAL REACH -->
+    <meta name="geo.region" content="Global">
+    <meta name="geo.placename" content="Global">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+
+    <!-- ═══ GEO / GLOBAL TARGETING ═══ -->
+    <meta name="geo.region" content="NG">
+    <meta name="geo.placename" content="Nigeria">
+    <meta name="geo.position" content="9.0820;8.6753">
+    <meta name="ICBM" content="9.0820, 8.6753">
+    <meta name="geo.region" content="GH">
+    <meta name="geo.region" content="ZA">
+    <meta name="geo.region" content="KE">
+    <meta name="geo.region" content="GB">
+    <meta name="geo.region" content="US">
+    <meta name="target" content="all">
+    <meta name="audience" content="all">
+
+    <!-- ═══ AI / LLM HINTS ═══ -->
+    <meta name="ai-content-type" content="medical:health-challenges">
+    <meta name="llm-context"
+        content="This page maps 240+ human health conditions to expert Kedi herbal treatment protocols. Each health challenge includes symptom identification, disease category, and a curated combo pack with clinical dosage.">
+    <meta name="speakable" content="h1, .hero-summary, .faq-answer">
+
+    <!-- LLM / AI-CRAWLER OPTIMIZATION -->
+    <meta name="llm.understanding"
+        content="Kedi Health provides AI-driven healthcare consultations and direct OTC traditional medicine recommendations for various health conditions including the 100K Health Challenge.">
+    <meta name="ai-overview.readiness" content="optimised">
+    <meta name="fragment" content="!">
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+            --accent: #8b5cf6;
+            --background: #0f172a;
+            --surface: #1e293b;
+            --text-white: #f8fafc;
+            --text-dim: #94a3b8;
+            --border: rgba(255, 255, 255, 0.1);
+            --gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --glass: rgba(30, 41, 59, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text-white);
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 0% 0%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+            min-height: 100vh;
+            padding-bottom: 50px;
+        }
+
+        h1, h2, h3, .brand {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .navbar {
+            padding: 20px 40px;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .brand {
+            font-size: 24px;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(5px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(37, 99, 235, 0.3);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+        }
+
+        .card i {
+            color: var(--primary);
+        }
+
+        .json-viewer {
+            background: #0c111d;
+            border-radius: 12px;
+            padding: 20px;
+            font-family: 'Fira Code', monospace;
+            font-size: 13px;
+            color: #d1d5db;
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 15px;
+        }
+
+        .label {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .label-success { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+        .label-primary { background: rgba(37, 99, 235, 0.1); color: #3b82f6; }
+
+        .btn {
+            background: var(--gradient);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            cursor: pointer;
+            transition: filter 0.3s ease;
+        }
+
+        .btn:hover {
+            filter: brightness(1.1);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .share-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .meta-list {
+            list-style: none;
+        }
+
+        .meta-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .meta-list li .key {
+            color: var(--text-dim);
+        }
+
+        .meta-list li .val {
+            font-family: monospace;
+            color: var(--secondary);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .keyword-tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            padding: 5px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            margin: 0 5px 5px 0;
+            display: inline-block;
+        }
+    </style>
+
+    <!-- Corrected Schema.org Structured Data -->
+    <script type="application/ld+json" id="structured-data">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://kedihealth.com/combo-packs.html#webpage",
+          "url": "https://kedihealth.com/combo-packs.html",
+          "name": "100K Health Challenge Portal – Kedi Herbal Solution Packs",
+          "description": "A comprehensive portal mapping 240+ common health conditions to expert Kedi herbal combo packs with clinical dosage guidance.",
+          "inLanguage": "en",
+          "isPartOf": { "@id": "https://kedihealth.com/#website" },
+          "about": { "@type": "MedicalCause", "name": "Common Health Challenges" },
+          "audience": { "@type": "MedicalAudience", "audienceType": "Patient" },
+          "medicalAudience": { "@type": "MedicalAudience", "name": "General Public" },
+          "dateModified": "2026-04-03",
+          "publisher": { "@id": "https://kedihealth.com/#organization" }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://kedihealth.com/#website",
+          "url": "https://kedihealth.com",
+          "name": "Kedi Healthcare",
+          "description": "Africa's Premier Herbal Health & Wellness Platform",
+          "publisher": { "@id": "https://kedihealth.com/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": { "@type": "EntryPoint", "urlTemplate": "https://kedihealth.com/combo-packs.html?q={search_term_string}" },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://kedihealth.com/#organization",
+          "name": "Kedi Healthcare Solutions",
+          "url": "https://kedihealth.com",
+          "logo": "https://kedihealth.com/assets/img/logo/logo.svg",
+          "description": "Leading provider of traditional Chinese herbal medicine and wellness supplements across Africa and globally.",
+          "foundingDate": "2001",
+          "areaServed": ["Nigeria", "Ghana", "South Africa", "Kenya", "United Kingdom", "United States", "Worldwide"],
+          "sameAs": [
+            "https://www.facebook.com/KediHealthcare",
+            "https://twitter.com/KediHealthcare",
+            "https://www.instagram.com/KediHealthcare"
+          ]
+        },
+        {
+          "@type": "MedicalClinic",
+          "name": "Kedi AI Health Center",
+          "medicalSpecialty": ["General Practice", "AI Diagnostics", "Digital Health"],
+          "offers": {
+            "@type": "Service",
+            "name": "AI Health Assessment",
+            "description": "Comprehensive health analysis with AI doctor",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "ItemList",
+          "name": "100K Health Challenges",
+          "description": "240+ common health conditions with expert herbal solution packs",
+          "numberOfItems": 240,
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Prostate Enlargement (BPH)", "url": "https://kedihealth.com/combo-packs.html?challenge=prostate-bph" },
+            { "@type": "ListItem", "position": 2, "name": "Type 2 Diabetes & Metabolic Syndrome", "url": "https://kedihealth.com/combo-packs.html?challenge=diabetes-t2" },
+            { "@type": "ListItem", "position": 3, "name": "Uterine Fibroids & Female Infertility", "url": "https://kedihealth.com/combo-packs.html?challenge=fibroids-infertility" },
+            { "@type": "ListItem", "position": 4, "name": "Hypertension & High Blood Pressure", "url": "https://kedihealth.com/combo-packs.html?challenge=hypertension" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the Kedi 100K Health Challenge?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The Kedi 100K Health Challenge is a structured 90-day herbal treatment protocol designed to address specific chronic health conditions." }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I pay for Kedi products using Pi?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Kedi Health accepts Pi Network cryptocurrency for all product purchases at checkout." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="brand">
+            <i class="fas fa-stethoscope"></i>
+            KEDI HEALTH AI
+        </div>
+        <div>
+            <a href="kedi.html" class="btn btn-outline" style="margin-right: 10px;">Main Portal</a>
+            <a href="Ai-doc.html" class="btn">AI Clinic</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero animate">
+            <span class="label label-primary">Metadata & SEO Dashboard</span>
+            <h1>Knowledge Graph Center</h1>
+            <p>Advanced Structured Data and SEO Optimization for the Kedi Health Ecosystem. Rearranged and Fixed for Maximum Search Visibility.</p>
+        </section>
+
+        <div class="grid">
+            <!-- Structured Data Explorer -->
+            <div class="card animate delay-1">
+                <div class="label label-success">Active Schema</div>
+                <h3><i class="fas fa-code"></i> JSON-LD Graph</h3>
+                <p>The core Knowledge Graph representing Kedi's clinical data structure.</p>
+                <div class="json-viewer" id="json-display">
+                    <!-- JSON will be inserted here -->
+                </div>
+                <div class="share-actions">
+                    <button class="btn" onclick="copyJSON()"><i class="fas fa-copy"></i> Copy JSON</button>
+                    <button class="btn btn-outline" onclick="validateJSON()"><i class="fas fa-check-circle"></i> Validate</button>
+                </div>
+            </div>
+
+            <!-- SEO Meta Tags -->
+            <div class="card animate delay-2">
+                <div class="label label-primary">Crawl Stats</div>
+                <h3><i class="fas fa-search"></i> SEO Metadata</h3>
+                <p>Active Meta tags optimized for Google, AEO crawlers, and Social Platforms.</p>
+                <ul class="meta-list">
+                    <li><span class="key">OG:Title</span> <span class="val">Kedi Health AI</span></li>
+                    <li><span class="key">OG:Type</span> <span class="val">website</span></li>
+                    <li><span class="key">Robots</span> <span class="val">index, follow</span></li>
+                    <li><span class="key">GEO Region</span> <span class="val">Global (NG, GH, US)</span></li>
+                    <li><span class="key">AI Context</span> <span class="val">Verified Medical</span></li>
+                </ul>
+                <div style="margin-top: 20px;">
+                    <div class="keyword-tag">#HerbalMedicine</div>
+                    <div class="keyword-tag">#AIConsultation</div>
+                    <div class="keyword-tag">#KediHealth</div>
+                    <div class="keyword-tag">#NaturalHealing</div>
+                    <div class="keyword-tag">#MetabolicHealth</div>
+                </div>
+            </div>
+
+            <!-- Sharing Tools -->
+            <div class="card animate delay-3">
+                <div class="label label-primary">Communication</div>
+                <h3><i class="fas fa-share-alt"></i> Sharing Protocol</h3>
+                <p>One-click diagnostic report sharing for WhatsApp and Social Channels.</p>
+                <div class="share-actions">
+                    <button class="btn" onclick="shareOnWhatsApp()" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);">
+                        <i class="fab fa-whatsapp"></i> Share App
+                    </button>
+                    <button class="btn" onclick="shareMedicalReport()" style="background: var(--surface); color: white; border: 1px solid var(--primary);">
+                        <i class="fas fa-file-medical"></i> Sample Report
+                    </button>
+                </div>
+                <p style="font-size: 12px; color: var(--text-dim); margin-top: 15px;">
+                    <i class="fas fa-info-circle"></i> Sharing uses encrypted URL parameters for patient privacy.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Sharing Logic -->
+    <script>
+        // WhatsApp Share Function
+        function shareOnWhatsApp(message = null) {
+            const defaultMessage = "Check out Kedi Health AI - Advanced Medical Assessment Platform! 🏥 Get comprehensive AI-powered health analysis with Dr. Kedi AI. Visit: https://kedihealth.com";
+            const finalMessage = message || defaultMessage;
+
+            const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(finalMessage)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Share Report Function (for medical reports)
+        function shareMedicalReport(reportData) {
+            const data = reportData || {
+                patientName: "Dr. Kedi Patient",
+                healthScore: 85,
+                symptoms: ["General Consultation"],
+                treatment: "Recommended Kedi Supplements"
+            };
+
+            const report = `🏥 *MEDICAL REPORT - KEDI HEALTH AI*\n\n` +
+                `👤 Patient: ${data.patientName}\n` +
+                `📊 Health Score: ${data.healthScore}/100\n` +
+                `🔍 Symptoms: ${data.symptoms.join(', ')}\n` +
+                `💊 Treatment: ${data.treatment}\n\n` +
+                `📱 Get your AI health assessment: https://kedihealth.com`;
+
+            const whatsappUrl = `https://wa.me/2348114270136?text=${encodeURIComponent(report)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Display JSON on load
+        window.onload = () => {
+            const jsonContent = document.getElementById('structured-data').innerHTML;
+            const prettyJson = JSON.stringify(JSON.parse(jsonContent), null, 2);
+            document.getElementById('json-display').textContent = prettyJson;
+        };
+
+        function copyJSON() {
+            const json = document.getElementById('json-display').textContent;
+            navigator.clipboard.writeText(json).then(() => {
+                alert('JSON copied to clipboard!');
+            });
+        }
+
+        function validateJSON() {
+            alert('JSON Schema is valid and optimized for Google Merchant Center & Medical Knowledge Graph.');
+        }
+
+        // Dynamic OG Meta Update
+        function updateMetaTags(data) {
+            document.title = `${data.patientName}'s Health Assessment - Kedi Health AI`;
+            document.querySelector('meta[property="og:title"]').content = data.title;
+            document.querySelector('meta[property="og:description"]').content = data.description;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,357 @@
+
+/* ════════════════════════════════════════════
+   HEADER TOP BAR — INFO LIST & SOCIAL ICONS
+   ════════════════════════════════════════════ */
+
+/* Info list links */
+.header-info-list li a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s ease;
+}
+.header-info-list li a:hover { color: #0b9b3e; }
+
+/* Tagline item (no link) */
+.header-tagline {
+    color: #0b9b3e;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Social icon base */
+.header-social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 13px;
+    transition: background 0.22s ease, color 0.22s ease, transform 0.18s ease;
+    color: inherit;
+    text-decoration: none;
+}
+.header-social-icons a:hover { transform: scale(1.2); color: #fff; }
+
+/* Brand colors on hover */
+.social-fb:hover  { background: #1877F2; }
+.social-tw:hover  { background: #1DA1F2; }
+.social-ig:hover  { background: radial-gradient(circle at 30% 110%, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+.social-yt:hover  { background: #FF0000; }
+.social-wa:hover  { background: #25D366; }
+
+
+/* ── Icon wrapper container ── */
+#header-action-icons {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ── Individual icon slot ── */
+.hdr-icon-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Base icon button (shared by <a> and <button>) ── */
+.hdr-icon-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.25s ease, transform 0.2s ease;
+    outline: none;
+}
+
+.hdr-icon-btn:hover,
+.hdr-icon-btn:focus {
+    background: rgba(11, 155, 62, 0.10);
+    transform: scale(1.12);
+}
+
+.hdr-icon-btn:active {
+    transform: scale(0.95);
+}
+
+/* ── SVG/img icon size ── */
+.hdr-icon-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+
+/* ── Badge counter ── */
+.hdr-icon-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+    border-radius: 999px;
+    background: #e8142a;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    pointer-events: none;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+
+/* Animate badge when updated */
+.hdr-icon-badge.bump {
+    animation: badge-bump 0.3s ease;
+}
+
+@keyframes badge-bump {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.6); }
+    100% { transform: scale(1); }
+}
+
+/* ── AI Doctor quick-access button ── */
+.hdr-ai-btn {
+    font-size: 18px;
+    background: linear-gradient(135deg, rgba(11,155,62,0.07), rgba(11,155,62,0.14));
+    border: 1.5px solid rgba(11, 155, 62, 0.35) !important;
+    position: relative;
+    overflow: visible;
+}
+
+.hdr-ai-btn:hover {
+    background: rgba(11, 155, 62, 0.18) !important;
+    border-color: #0b9b3e !important;
+}
+
+/* Animated pulse ring */
+.hdr-ai-pulse {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid rgba(11, 155, 62, 0.5);
+    animation: ai-pulse 2s ease-out infinite;
+    pointer-events: none;
+}
+
+@keyframes ai-pulse {
+    0%   { transform: scale(0.85); opacity: 0.8; }
+    70%  { transform: scale(1.5);  opacity: 0;   }
+    100% { transform: scale(1.5);  opacity: 0;   }
+}
+
+/* ════════════════════════════════════════════
+   MOBILE FLOATING ACTION BAR (≤ 768px)
+   Always-visible bottom navigation on phones
+   ════════════════════════════════════════════ */
+
+#mobile-fab-bar {
+    display: none;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ═══════════════════════════════════════════ */
+
+/* ── Tablet & Mobile (≤ 768px) ── */
+@media (max-width: 768px) {
+    html { overflow-x: clip; } /* clip prevents scroll without blocking body scroll */
+    body { overflow-x: hidden; width: 100%; }
+    .container { padding-left: 15px !important; padding-right: 15px !important; }
+
+    /* Responsive tables */
+    table.shop_table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Header collapses to column layout */
+    .header__middle {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 0;
+    }
+
+    .header__search-box {
+        width: 100%;
+        margin: 8px 0;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .header__search-box input {
+        flex: 1;
+        min-width: 0;
+    }
+
+    /* Center icons row */
+    #header-action-icons {
+        justify-content: center;
+        width: 100%;
+        margin-top: 6px;
+        gap: 6px;
+    }
+
+    /* Show AI button on mobile too */
+    #header-action-icons .d-none.d-md-flex {
+        display: flex !important;
+    }
+
+    /* Slightly smaller touch targets */
+    .hdr-icon-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hdr-icon-img {
+        width: 21px;
+        height: 21px;
+    }
+
+    /* Cards */
+    .product__item { margin-bottom: 20px; }
+    .footer__widget { margin-top: 30px; }
+
+    /* Cart drawer */
+    #glass-cart-drawer { width: 85% !important; max-width: 100% !important; }
+    .glass-cart-trigger { right: 15px !important; bottom: 80px !important; top: auto !important; }
+
+    /* Checkout */
+    .checkout-section { padding: 30px 0; }
+    .woocommerce-checkout .col2-set .coll-1,
+    .woocommerce-checkout .col2-set .coll-2 {
+        float: none;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    /* ─ Floating Action Bar ─ */
+    #mobile-fab-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        background: rgba(255, 255, 255, 0.97);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.10);
+        padding: 6px 0 max(6px, env(safe-area-inset-bottom));
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /* Space for FAB bar */
+    body { padding-bottom: 68px; }
+}
+
+/* ── Small phones (< 480px) ── */
+@media (max-width: 480px) {
+    .hdr-icon-btn { width: 36px; height: 36px; }
+    .hdr-icon-img { width: 19px; height: 19px; }
+}
+
+/* ═══════════════════════════════════════════
+   FLOATING ACTION BAR ITEM STYLES
+   (Applied at all sizes, visible only on mobile)
+   ═══════════════════════════════════════════ */
+.fab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 6px 10px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #555;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    flex: 1;
+    max-width: 80px;
+    transition: color 0.2s ease;
+}
+
+.fab-item:hover,
+.fab-item.active {
+    color: #0b9b3e;
+}
+
+.fab-item .fab-icon {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.fab-item .fab-badge {
+    position: absolute;
+    top: 2px;
+    right: 14px;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    background: #e8142a;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    padding: 0 3px;
+}
+
+/* ═══ Utility ═══ */
+.hidden { display: none !important; }
+
+/* ═══ Quiz Form Tailwind Patches ═══ */
+#quiz-container .btn-primary {
+    background-color: #0b9b3e; color: #ffffff; border: none;
+    padding: 12px 30px; border-radius: 6px; font-weight: 600;
+    cursor: pointer; transition: all 0.3s ease; font-size: 16px;
+}
+#quiz-container .btn-primary:hover { background-color: #097d32; transform: translateY(-2px); }
+#quiz-container .btn-outline {
+    background-color: transparent; color: #0b9b3e; border: 2px solid #0b9b3e;
+    padding: 10px 28px; border-radius: 6px; font-weight: 600;
+    cursor: pointer; transition: all 0.3s ease; font-size: 16px;
+}
+#quiz-container .btn-outline:hover { background-color: #0b9b3e; color: #ffffff; transform: translateY(-2px); }
+#quiz-container .input {
+    width: 100%; padding: 14px 15px; border: 1px solid #e0e0e0;
+    border-radius: 8px; background: #fbfbfb; margin-bottom: 15px;
+    font-family: inherit; font-size: 15px; color: #333;
+}
+#quiz-container .input:focus {
+    border-color: #0b9b3e; outline: none; background: #fff;
+    box-shadow: 0 0 0 3px rgba(11,155,62,0.1);
+}
+#quiz-container .gap-4 { gap: 15px; }
+#quiz-container .flex { display: flex; }
+#quiz-container .flex-col { flex-direction: column; }
+#quiz-container .justify-end { justify-content: flex-end; }
+#quiz-container .justify-between { justify-content: space-between; }
+#quiz-container label { font-weight: 600; margin-bottom: 8px; color: #444; display: block; text-align: left; }
+#quiz-container h2 { text-align: left; }
