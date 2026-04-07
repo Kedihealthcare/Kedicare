@@ -400,6 +400,340 @@
         <div class="body-overlay"></div>
         <!-- slide-bar end -->
 
+        <!-- ══════════════════════════════════════
+             COMBO PACKS MAIN CONTENT
+        ══════════════════════════════════════ -->
+
+        <!-- Hero Banner -->
+        <section style="background:linear-gradient(135deg,#0a4f2e 0%,#1a8c52 60%,#2dd17a 100%);padding:60px 0 40px;text-align:center;color:#fff;margin-top:0;">
+            <div class="container">
+                <h1 style="font-size:2.4rem;font-weight:800;margin-bottom:12px;text-shadow:0 2px 8px rgba(0,0,0,.3);">
+                    💊 Kedi 100K Health Challenge Packs
+                </h1>
+                <p style="font-size:1.1rem;max-width:620px;margin:0 auto 24px;opacity:.92;">
+                    Clinically formulated herbal combo packs for 50+ common health challenges. Fast delivery across Nigeria and worldwide.
+                </p>
+                <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+                    <a href="ai-doctor.html" style="background:#fff;color:#0a4f2e;padding:12px 28px;border-radius:30px;font-weight:700;text-decoration:none;font-size:.95rem;">🤖 Get AI Diagnosis</a>
+                    <a href="https://wa.me/2348114270136?text=Hi%2C%20I%20need%20help%20choosing%20a%20Kedi%20combo%20pack" target="_blank" style="background:rgba(255,255,255,.15);border:2px solid #fff;color:#fff;padding:12px 28px;border-radius:30px;font-weight:700;text-decoration:none;font-size:.95rem;">💬 Chat with Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <section style="background:#fff;border-bottom:1px solid #e8f5ee;padding:18px 0;">
+            <div class="container">
+                <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;text-align:center;">
+                    <div><strong style="font-size:1.5rem;color:#0a4f2e;">27+</strong><br><small style="color:#666;">Herbal Products</small></div>
+                    <div><strong style="font-size:1.5rem;color:#0a4f2e;">26+</strong><br><small style="color:#666;">Combo Packs</small></div>
+                    <div><strong style="font-size:1.5rem;color:#0a4f2e;">50+</strong><br><small style="color:#666;">Health Conditions</small></div>
+                    <div><strong style="font-size:1.5rem;color:#0a4f2e;">🌍</strong><br><small style="color:#666;">Worldwide Delivery</small></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ HEALTH CHALLENGE PACKS BROWSER ══ -->
+        <section id="challenge-section" style="padding:48px 0 36px;background:linear-gradient(180deg,#f0faf4 0%,#fff 100%);">
+            <div class="container">
+
+                <!-- Section Heading -->
+                <div style="text-align:center;margin-bottom:36px;">
+                    <span style="display:inline-block;background:#e8f5ee;color:#0a4f2e;font-size:.8rem;font-weight:700;padding:5px 16px;border-radius:20px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;">🌿 Browse by Condition</span>
+                    <h2 style="font-size:1.9rem;font-weight:800;color:#1a2e22;margin:0 0 8px;">Health Challenge Packs</h2>
+                    <p style="color:#666;max-width:520px;margin:0 auto;font-size:.95rem;">Choose your health challenge below — each pack is a clinically formulated 30–90 day herbal protocol.</p>
+                </div>
+
+                <!-- Pill Tabs (Category Groups) -->
+                <div id="cat-tabs" style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:28px;">
+                    <button class="cat-tab active-tab" data-cat="all"    onclick="filterChallenge('all')"    style="padding:8px 20px;border-radius:25px;border:2px solid #0a4f2e;background:#0a4f2e;color:#fff;font-weight:600;cursor:pointer;font-size:.85rem;transition:all .2s;">All Challenges</button>
+                    <button class="cat-tab" data-cat="men"               onclick="filterChallenge('men')"    style="padding:8px 20px;border-radius:25px;border:2px solid #b6d9c8;background:#fff;color:#0a4f2e;font-weight:600;cursor:pointer;font-size:.85rem;transition:all .2s;">👨 Men's Health</button>
+                    <button class="cat-tab" data-cat="women"             onclick="filterChallenge('women')"  style="padding:8px 20px;border-radius:25px;border:2px solid #b6d9c8;background:#fff;color:#0a4f2e;font-weight:600;cursor:pointer;font-size:.85rem;transition:all .2s;">👩 Women's Health</button>
+                    <button class="cat-tab" data-cat="heart"             onclick="filterChallenge('heart')"  style="padding:8px 20px;border-radius:25px;border:2px solid #b6d9c8;background:#fff;color:#0a4f2e;font-weight:600;cursor:pointer;font-size:.85rem;transition:all .2s;">❤️ Heart & Blood</button>
+                    <button class="cat-tab" data-cat="gut"               onclick="filterChallenge('gut')"    style="padding:8px 20px;border-radius:25px;border:2px solid #b6d9c8;background:#fff;color:#0a4f2e;font-weight:600;cursor:pointer;font-size:.85rem;transition:all .2s;">🫁 Digestion & Liver</button>
+                    <button class="cat-tab" data-cat="immune"            onclick="filterChallenge('immune')" style="padding:8px 20px;border-radius:25px;border:2px solid #b6d9c8;background:#fff;color:#0a4f2e;font-weight:600;cursor:pointer;font-size:.85rem;transition:all .2s;">🛡️ Immune & Infection</button>
+                    <button class="cat-tab" data-cat="bone"              onclick="filterChallenge('bone')"   style="padding:8px 20px;border-radius:25px;border:2px solid #b6d9c8;background:#fff;color:#0a4f2e;font-weight:600;cursor:pointer;font-size:.85rem;transition:all .2s;">🦴 Bone & Pain</button>
+                    <button class="cat-tab" data-cat="mind"              onclick="filterChallenge('mind')"   style="padding:8px 20px;border-radius:25px;border:2px solid #b6d9c8;background:#fff;color:#0a4f2e;font-weight:600;cursor:pointer;font-size:.85rem;transition:all .2s;">🧠 Mind & Energy</button>
+                </div>
+
+                <!-- Challenge Cards Grid -->
+                <div id="challenge-cards" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;">
+
+                    <!-- Men's Health -->
+                    <div class="ch-card" data-cat="men" data-tag="prostate" onclick="scrollToAndSearch('prostate')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #e0f0e8;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🫀</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Prostate Enlargement</strong>
+                        <span style="font-size:.75rem;color:#0a4f2e;background:#e8f5ee;padding:2px 8px;border-radius:10px;">Lycovite Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="men" data-tag="erectile dysfunction" onclick="scrollToAndSearch('erectile')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #e0f0e8;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">⚡</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Erectile Dysfunction</strong>
+                        <span style="font-size:.75rem;color:#0a4f2e;background:#e8f5ee;padding:2px 8px;border-radius:10px;">Re-Vive Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="men" data-tag="low sperm" onclick="scrollToAndSearch('sperm')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #e0f0e8;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🔬</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Low Sperm Count</strong>
+                        <span style="font-size:.75rem;color:#0a4f2e;background:#e8f5ee;padding:2px 8px;border-radius:10px;">Fertility Pack</span>
+                    </div>
+
+                    <!-- Women's Health -->
+                    <div class="ch-card" data-cat="women" data-tag="fibroid" onclick="scrollToAndSearch('fibroid')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #fce8f0;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🌸</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Uterine Fibroids</strong>
+                        <span style="font-size:.75rem;color:#c0175e;background:#fce8f0;padding:2px 8px;border-radius:10px;">Gynapharm Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="women" data-tag="menstrual" onclick="scrollToAndSearch('menstrual')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #fce8f0;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🌙</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Menstrual Disorders</strong>
+                        <span style="font-size:.75rem;color:#c0175e;background:#fce8f0;padding:2px 8px;border-radius:10px;">Eve Comfort Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="women" data-tag="menopause" onclick="scrollToAndSearch('menopause')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #fce8f0;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🌡️</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Menopause Relief</strong>
+                        <span style="font-size:.75rem;color:#c0175e;background:#fce8f0;padding:2px 8px;border-radius:10px;">Hormonal Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="women" data-tag="PID" onclick="scrollToAndSearch('PID')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #fce8f0;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🩺</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Pelvic Inflammatory</strong>
+                        <span style="font-size:.75rem;color:#c0175e;background:#fce8f0;padding:2px 8px;border-radius:10px;">Gynapharm Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="women" data-tag="pregnancy" onclick="scrollToAndSearch('pregnancy')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #fce8f0;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🤰</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Pregnancy Support</strong>
+                        <span style="font-size:.75rem;color:#c0175e;background:#fce8f0;padding:2px 8px;border-radius:10px;">Vitaprego Pack</span>
+                    </div>
+
+                    <!-- Heart & Blood -->
+                    <div class="ch-card" data-cat="heart" data-tag="hypertension" onclick="scrollToAndSearch('hypertension')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #fdeaeb;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">💓</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Hypertension</strong>
+                        <span style="font-size:.75rem;color:#c01c1c;background:#fdeaeb;padding:2px 8px;border-radius:10px;">Cardibetter Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="heart" data-tag="heart disease" onclick="scrollToAndSearch('heart disease')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #fdeaeb;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">❤️‍🩹</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Heart Disease</strong>
+                        <span style="font-size:.75rem;color:#c01c1c;background:#fdeaeb;padding:2px 8px;border-radius:10px;">Heart Vitality Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="heart" data-tag="anemia" onclick="scrollToAndSearch('anemia')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #fdeaeb;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🩸</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Anemia & Low Blood</strong>
+                        <span style="font-size:.75rem;color:#c01c1c;background:#fdeaeb;padding:2px 8px;border-radius:10px;">Haemocare Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="heart" data-tag="diabetes" onclick="scrollToAndSearch('diabetes')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #fdeaeb;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🍬</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Diabetes Type 2</strong>
+                        <span style="font-size:.75rem;color:#c01c1c;background:#fdeaeb;padding:2px 8px;border-radius:10px;">Diawell Pack</span>
+                    </div>
+
+                    <!-- Digestion & Liver -->
+                    <div class="ch-card" data-cat="gut" data-tag="ulcer" onclick="scrollToAndSearch('ulcer')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #fef3e2;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🔥</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Stomach Ulcer</strong>
+                        <span style="font-size:.75rem;color:#8a4f00;background:#fef3e2;padding:2px 8px;border-radius:10px;">Gastrifort Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="gut" data-tag="liver" onclick="scrollToAndSearch('liver')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #fef3e2;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🫀</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Liver & Hepatitis</strong>
+                        <span style="font-size:.75rem;color:#8a4f00;background:#fef3e2;padding:2px 8px;border-radius:10px;">Lirich Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="gut" data-tag="constipation" onclick="scrollToAndSearch('constipation')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #fef3e2;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🌀</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Constipation & Piles</strong>
+                        <span style="font-size:.75rem;color:#8a4f00;background:#fef3e2;padding:2px 8px;border-radius:10px;">Colon Tea Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="gut" data-tag="detox" onclick="scrollToAndSearch('detox')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #fef3e2;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🌿</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Full Body Detox</strong>
+                        <span style="font-size:.75rem;color:#8a4f00;background:#fef3e2;padding:2px 8px;border-radius:10px;">Detox Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="gut" data-tag="kidney" onclick="scrollToAndSearch('kidney')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #fef3e2;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🫘</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Kidney Disease</strong>
+                        <span style="font-size:.75rem;color:#8a4f00;background:#fef3e2;padding:2px 8px;border-radius:10px;">Liver & Kidney Pack</span>
+                    </div>
+
+                    <!-- Immune & Infection -->
+                    <div class="ch-card" data-cat="immune" data-tag="staph" onclick="scrollToAndSearch('staph')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #e9eeff;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🦠</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Staphylococcus</strong>
+                        <span style="font-size:.75rem;color:#1c3cb0;background:#e9eeff;padding:2px 8px;border-radius:10px;">Infection Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="immune" data-tag="typhoid" onclick="scrollToAndSearch('typhoid')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #e9eeff;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🌡️</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Typhoid & Malaria</strong>
+                        <span style="font-size:.75rem;color:#1c3cb0;background:#e9eeff;padding:2px 8px;border-radius:10px;">Infection Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="immune" data-tag="cancer" onclick="scrollToAndSearch('cancer')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #e9eeff;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🛡️</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Cancer Support</strong>
+                        <span style="font-size:.75rem;color:#1c3cb0;background:#e9eeff;padding:2px 8px;border-radius:10px;">Golden Hypha Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="immune" data-tag="asthma" onclick="scrollToAndSearch('asthma')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #e9eeff;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">💨</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Asthma & Lungs</strong>
+                        <span style="font-size:.75rem;color:#1c3cb0;background:#e9eeff;padding:2px 8px;border-radius:10px;">Cordy Active Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="immune" data-tag="UTI" onclick="scrollToAndSearch('UTI')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #e9eeff;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">💧</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">UTI & Bladder</strong>
+                        <span style="font-size:.75rem;color:#1c3cb0;background:#e9eeff;padding:2px 8px;border-radius:10px;">UTI Pack</span>
+                    </div>
+
+                    <!-- Bone & Pain -->
+                    <div class="ch-card" data-cat="bone" data-tag="arthritis" onclick="scrollToAndSearch('arthritis')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #ede8ff;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🦴</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Arthritis & Joint Pain</strong>
+                        <span style="font-size:.75rem;color:#4a1cb0;background:#ede8ff;padding:2px 8px;border-radius:10px;">Calmazine Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="bone" data-tag="back pain" onclick="scrollToAndSearch('back pain')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #ede8ff;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🔩</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Back & Spine Pain</strong>
+                        <span style="font-size:.75rem;color:#4a1cb0;background:#ede8ff;padding:2px 8px;border-radius:10px;">Back Pain Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="bone" data-tag="gout" onclick="scrollToAndSearch('gout')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #ede8ff;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🦶</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Gout & Uric Acid</strong>
+                        <span style="font-size:.75rem;color:#4a1cb0;background:#ede8ff;padding:2px 8px;border-radius:10px;">Gout Pack</span>
+                    </div>
+
+                    <!-- Mind & Energy -->
+                    <div class="ch-card" data-cat="mind" data-tag="memory loss" onclick="scrollToAndSearch('memory loss')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #e8f8ff;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">🧠</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Memory & Brain Fog</strong>
+                        <span style="font-size:.75rem;color:#006a9e;background:#e8f8ff;padding:2px 8px;border-radius:10px;">Memory 24/7 Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="mind" data-tag="chronic fatigue" onclick="scrollToAndSearch('chronic fatigue')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #e8f8ff;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">⚡</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Chronic Fatigue</strong>
+                        <span style="font-size:.75rem;color:#006a9e;background:#e8f8ff;padding:2px 8px;border-radius:10px;">Energy Restore Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="mind" data-tag="insomnia" onclick="scrollToAndSearch('insomnia')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #e8f8ff;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">😴</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Insomnia & Anxiety</strong>
+                        <span style="font-size:.75rem;color:#006a9e;background:#e8f8ff;padding:2px 8px;border-radius:10px;">Sleep Recovery Pack</span>
+                    </div>
+                    <div class="ch-card" data-cat="mind" data-tag="weight gain" onclick="scrollToAndSearch('weight gain')" style="background:#fff;border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;border:1.5px solid #e8f8ff;box-shadow:0 2px 10px rgba(0,60,30,.07);transition:all .2s;">
+                        <div style="font-size:2rem;margin-bottom:8px;">⚖️</div>
+                        <strong style="font-size:.92rem;color:#1a2e22;display:block;margin-bottom:4px;">Weight & Metabolism</strong>
+                        <span style="font-size:.75rem;color:#006a9e;background:#e8f8ff;padding:2px 8px;border-radius:10px;">Weight Fix Pack</span>
+                    </div>
+
+                </div><!-- /challenge-cards -->
+            </div>
+        </section>
+        <!-- ══ END HEALTH CHALLENGE PACKS BROWSER ══ -->
+
+        <!-- Divider -->
+        <div style="text-align:center;padding:28px 0 4px;background:#fff;">
+            <span style="display:inline-block;background:#e8f5ee;color:#0a4f2e;font-size:.8rem;font-weight:700;padding:5px 16px;border-radius:20px;letter-spacing:.08em;text-transform:uppercase;">📦 All Products & Packs</span>
+            <p style="color:#888;font-size:.88rem;margin:6px 0 0;">Use search and filters below to find exactly what you need</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <section style="background:#f4faf6;padding:22px 0;border-bottom:1px solid #ddeee5;position:sticky;top:0;z-index:99;">
+            <div class="container">
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                    <input id="combo-search" type="text" placeholder="🔍 Search products or conditions..." style="flex:1;min-width:220px;padding:10px 18px;border:1.5px solid #b6d9c8;border-radius:25px;font-size:.95rem;outline:0;">
+                    <select id="combo-filter" style="padding:10px 18px;border:1.5px solid #b6d9c8;border-radius:25px;font-size:.95rem;outline:0;background:#fff;cursor:pointer;">
+                        <option value="all">All Products</option>
+                        <option value="pack">Combo Packs Only</option>
+                        <option value="single">Individual Products</option>
+                    </select>
+                    <select id="sort-filter" style="padding:10px 18px;border:1.5px solid #b6d9c8;border-radius:25px;font-size:.95rem;outline:0;background:#fff;cursor:pointer;">
+                        <option value="default">Sort: Default</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="name">Name: A-Z</option>
+                    </select>
+                    <span id="product-count" style="font-size:.88rem;color:#666;white-space:nowrap;">Loading...</span>
+                </div>
+            </div>
+        </section>
+
+        <style>
+        .ch-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,60,30,.14) !important; border-color: #0a4f2e !important; }
+        .cat-tab:hover { background: #e8f5ee !important; border-color: #0a4f2e !important; }
+        .active-tab { background: #0a4f2e !important; color: #fff !important; border-color: #0a4f2e !important; }
+        </style>
+
+        <script>
+        /* Challenge category tab filter */
+        function filterChallenge(cat) {
+            document.querySelectorAll('.cat-tab').forEach(btn => {
+                btn.classList.remove('active-tab');
+                btn.style.background = '#fff';
+                btn.style.color = '#0a4f2e';
+            });
+            const active = document.querySelector(`.cat-tab[data-cat="${cat}"]`);
+            if (active) { active.classList.add('active-tab'); active.style.background='#0a4f2e'; active.style.color='#fff'; }
+
+            document.querySelectorAll('.ch-card').forEach(card => {
+                card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+            });
+        }
+
+        /* Scroll to product grid and auto-search */
+        function scrollToAndSearch(term) {
+            const searchEl = document.getElementById('combo-search');
+            const filterEl = document.getElementById('combo-filter');
+            if (searchEl) {
+                searchEl.value = term;
+                filterEl.value = 'pack';
+                searchEl.dispatchEvent(new Event('input'));
+                filterEl.dispatchEvent(new Event('change'));
+            }
+            const grid = document.getElementById('combo-grid');
+            if (grid) { setTimeout(() => grid.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100); }
+        }
+        </script>
+
+        <!-- Product Grid -->
+        <section style="padding:40px 0 60px;background:#f8fdf9;">
+            <div class="container">
+                <div id="combo-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;">
+                    <!-- Populated by JS -->
+                    <div style="text-align:center;padding:60px;grid-column:1/-1;color:#888;">
+                        <div style="font-size:2rem;">⏳</div>
+                        <p>Loading products...</p>
+                    </div>
+                </div>
+                <div id="no-results" style="display:none;text-align:center;padding:60px;color:#888;">
+                    <div style="font-size:3rem;">🔎</div>
+                    <h3>No products found</h3>
+                    <p>Try a different search term or filter.</p>
+                    <a href="https://wa.me/2348114270136?text=Hi%2C%20I%20need%20help%20finding%20a%20Kedi%20product" target="_blank" style="display:inline-block;margin-top:12px;background:#0a4f2e;color:#fff;padding:12px 28px;border-radius:25px;text-decoration:none;font-weight:600;">💬 Ask on WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- WhatsApp Order Modal -->
+        <div id="order-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;align-items:center;justify-content:center;">
+            <div style="background:#fff;border-radius:18px;padding:32px;max-width:440px;width:92%;position:relative;box-shadow:0 20px 60px rgba(0,60,30,.25);">
+                <button onclick="document.getElementById('order-modal').style.display='none'" style="position:absolute;top:14px;right:16px;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#666;">✕</button>
+                <h3 id="modal-title" style="margin:0 0 8px;color:#0a4f2e;font-size:1.2rem;"></h3>
+                <p id="modal-price" style="font-size:1.5rem;font-weight:800;color:#e44;margin:0 0 14px;"></p>
+                <p id="modal-desc" style="color:#555;font-size:.9rem;margin:0 0 20px;line-height:1.6;"></p>
+                <div id="modal-products" style="margin:0 0 20px;"></div>
+                <a id="modal-wa-btn" href="#" target="_blank" style="display:block;background:#25d366;color:#fff;text-align:center;padding:14px;border-radius:12px;font-weight:700;font-size:1rem;text-decoration:none;margin-bottom:10px;">
+                    📱 Order via WhatsApp
+                </a>
+                <a href="checkout.html" id="modal-checkout-btn" style="display:block;background:#0a4f2e;color:#fff;text-align:center;padding:12px;border-radius:12px;font-weight:600;font-size:.95rem;text-decoration:none;">
+                    🛒 Add to Cart & Checkout
+                </a>
+            </div>
+        </div>
+
+        <!-- CTA Footer Banner -->
+        <section style="background:linear-gradient(135deg,#0a4f2e,#1a8c52);padding:50px 0;text-align:center;color:#fff;">
+            <div class="container">
+                <h2 style="font-size:1.8rem;font-weight:800;margin-bottom:10px;">Not Sure Which Pack to Choose?</h2>
+                <p style="margin-bottom:24px;opacity:.9;">Let our AI doctor analyze your symptoms and recommend the right protocol for you.</p>
+                <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+                    <a href="ai-doctor.html" style="background:#fff;color:#0a4f2e;padding:14px 32px;border-radius:30px;font-weight:700;text-decoration:none;">🤖 Try AI Doctor</a>
+                    <a href="https://wa.me/2348114270136?text=Hi%2C%20I%20need%20a%20health%20consultation" target="_blank" style="background:#25d366;color:#fff;padding:14px 32px;border-radius:30px;font-weight:700;text-decoration:none;">💬 WhatsApp Consultation</a>
+                </div>
+            </div>
+        </section>
+
         <!-- jquery include -->
         <script src="jquery-3.5.1.min.js"></script>
         <script src="bootstrap.bundle.min.js"></script>
@@ -419,6 +753,206 @@
         <script src="chatbot.js"></script>
         <script src="kedi-ai.js"></script>
         <script src="wishlist.js"></script>
+
+        <!-- Combo Packs Dynamic Engine -->
+        <script>
+        (function () {
+            const PHONE = '2348114270136';
+            let allProducts = [];
+
+            /* ── Render a single card ── */
+            function renderCard(p) {
+                const isPack = !!p.is_pack;
+                const badge  = isPack
+                    ? '<span style="background:#e44;color:#fff;font-size:.7rem;font-weight:700;padding:2px 9px;border-radius:20px;margin-left:6px;">COMBO PACK</span>'
+                    : '<span style="background:#0a4f2e;color:#fff;font-size:.7rem;font-weight:700;padding:2px 9px;border-radius:20px;margin-left:6px;">SINGLE</span>';
+
+                const tags = (p.symptom_tags || []).slice(0, 4).map(t =>
+                    `<span style="display:inline-block;background:#e8f5ee;color:#0a4f2e;font-size:.72rem;padding:2px 8px;border-radius:12px;margin:2px 2px 0 0;">${t}</span>`
+                ).join('');
+
+                const imgSrc = p.image_url || 'favicon.png';
+
+                return `
+                <div class="combo-card" data-id="${p.id}" data-pack="${isPack}" data-name="${p.name.toLowerCase()}" data-tags="${(p.symptom_tags||[]).join(' ').toLowerCase()}" style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,60,30,.09);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;">
+                    <div style="position:relative;height:200px;overflow:hidden;background:#f0faf4;">
+                        <img src="${imgSrc}" alt="${p.name}" loading="lazy"
+                             onerror="this.src='favicon.png'"
+                             style="width:100%;height:100%;object-fit:contain;padding:16px;transition:transform .3s;">
+                        <div style="position:absolute;top:10px;left:10px;">${badge}</div>
+                        ${isPack ? '<div style="position:absolute;top:10px;right:10px;background:rgba(10,79,46,.85);color:#fff;font-size:.7rem;padding:3px 9px;border-radius:12px;">🌿 100K Challenge</div>' : ''}
+                    </div>
+                    <div style="padding:18px;flex:1;display:flex;flex-direction:column;">
+                        <h3 style="font-size:1rem;font-weight:700;color:#1a2e22;margin:0 0 6px;line-height:1.4;">${p.name}</h3>
+                        <p style="font-size:.85rem;color:#666;margin:0 0 10px;line-height:1.5;flex:1;">${p.description}</p>
+                        ${p.dosage ? `<p style="font-size:.78rem;color:#0a4f2e;background:#e8f5ee;padding:5px 10px;border-radius:8px;margin:0 0 10px;">💊 ${p.dosage}</p>` : ''}
+                        <div style="margin-bottom:12px;">${tags}</div>
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+                            <span style="font-size:1.4rem;font-weight:800;color:#0a4f2e;">$${p.price.toFixed(2)}</span>
+                            ${isPack ? '<span style="font-size:.78rem;color:#e44;font-weight:600;">💰 Bundle Savings</span>' : ''}
+                        </div>
+                        <div style="display:flex;gap:8px;">
+                            <button onclick="openOrderModal('${p.id}')" style="flex:1;background:#0a4f2e;color:#fff;border:none;padding:11px;border-radius:10px;font-weight:700;cursor:pointer;font-size:.88rem;transition:background .2s;">
+                                🛒 Order Now
+                            </button>
+                            <button onclick="quickWhatsApp('${p.id}')" style="background:#25d366;color:#fff;border:none;padding:11px 14px;border-radius:10px;cursor:pointer;font-size:1rem;transition:background .2s;" title="Order via WhatsApp">
+                                📱
+                            </button>
+                        </div>
+                    </div>
+                </div>`;
+            }
+
+            /* ── Render grid ── */
+            function renderGrid(products) {
+                const grid = document.getElementById('combo-grid');
+                const noRes = document.getElementById('no-results');
+                const count = document.getElementById('product-count');
+
+                if (!products.length) {
+                    grid.innerHTML = '';
+                    noRes.style.display = 'block';
+                    count.textContent = '0 results';
+                    return;
+                }
+
+                noRes.style.display = 'none';
+                grid.innerHTML = products.map(renderCard).join('');
+                count.textContent = `${products.length} product${products.length !== 1 ? 's' : ''} found`;
+
+                // Hover effects
+                grid.querySelectorAll('.combo-card').forEach(card => {
+                    card.addEventListener('mouseenter', () => {
+                        card.style.transform = 'translateY(-4px)';
+                        card.style.boxShadow = '0 12px 36px rgba(0,60,30,.16)';
+                    });
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = '';
+                        card.style.boxShadow = '0 4px 20px rgba(0,60,30,.09)';
+                    });
+                });
+            }
+
+            /* ── Apply filters ── */
+            function applyFilters() {
+                const q      = (document.getElementById('combo-search').value || '').toLowerCase().trim();
+                const filter = document.getElementById('combo-filter').value;
+                const sort   = document.getElementById('sort-filter').value;
+
+                let results = allProducts.filter(p => {
+                    if (filter === 'pack'   && !p.is_pack) return false;
+                    if (filter === 'single' && p.is_pack)  return false;
+                    if (!q) return true;
+                    return (
+                        p.name.toLowerCase().includes(q) ||
+                        p.description.toLowerCase().includes(q) ||
+                        (p.symptom_tags || []).some(t => t.toLowerCase().includes(q))
+                    );
+                });
+
+                if (sort === 'price-asc')  results.sort((a, b) => a.price - b.price);
+                if (sort === 'price-desc') results.sort((a, b) => b.price - a.price);
+                if (sort === 'name')       results.sort((a, b) => a.name.localeCompare(b.name));
+
+                renderGrid(results);
+            }
+
+            /* ── Open order modal ── */
+            window.openOrderModal = function (id) {
+                const p = allProducts.find(x => x.id === id);
+                if (!p) return;
+
+                document.getElementById('modal-title').textContent = p.name;
+                document.getElementById('modal-price').textContent = `$${p.price.toFixed(2)} USD`;
+                document.getElementById('modal-desc').textContent  = p.description;
+
+                // Sub-products list (for packs)
+                const mpEl = document.getElementById('modal-products');
+                if (p.is_pack && p.products && p.products.length) {
+                    const names = p.products.map(pid => {
+                        const match = allProducts.find(x => x.id === pid);
+                        return match ? `<li style="color:#0a4f2e;font-size:.88rem;padding:3px 0;">✅ ${match.name} — $${match.price.toFixed(2)}</li>` : '';
+                    }).join('');
+                    mpEl.innerHTML = `<p style="font-weight:700;margin:0 0 6px;font-size:.9rem;">📦 Includes:</p><ul style="list-style:none;padding:0;margin:0;">${names}</ul>`;
+                } else {
+                    mpEl.innerHTML = p.dosage ? `<p style="background:#e8f5ee;padding:8px 12px;border-radius:8px;font-size:.85rem;color:#0a4f2e;margin:0;">💊 Dosage: ${p.dosage}</p>` : '';
+                }
+
+                // WhatsApp message
+                const msg = `🌿 *KEDI HEALTH ORDER*\n\n` +
+                    `📦 Product: ${p.name}\n` +
+                    `💰 Price: $${p.price.toFixed(2)} USD\n` +
+                    `📝 ${p.description}\n\n` +
+                    `Please confirm my order and delivery details. Thank you!`;
+                document.getElementById('modal-wa-btn').href = `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
+
+                // Add to cart & checkout
+                document.getElementById('modal-checkout-btn').onclick = function () {
+                    if (window.KediShop && window.KediShop.addToCart) {
+                        window.KediShop.addToCart({ id: p.id, name: p.name, price: p.price, image: p.image_url, qty: 1 });
+                    } else {
+                        // Fallback: store in localStorage
+                        try {
+                            const cart = JSON.parse(localStorage.getItem('kedi_cart') || '[]');
+                            const existing = cart.find(x => x.id === p.id);
+                            if (existing) { existing.qty++; } else { cart.push({ id: p.id, name: p.name, price: p.price, image: p.image_url, qty: 1 }); }
+                            localStorage.setItem('kedi_cart', JSON.stringify(cart));
+                        } catch(e) {}
+                    }
+                    window.location.href = 'checkout.html';
+                };
+
+                const modal = document.getElementById('order-modal');
+                modal.style.display = 'flex';
+            };
+
+            /* ── Quick WhatsApp ── */
+            window.quickWhatsApp = function (id) {
+                const p = allProducts.find(x => x.id === id);
+                if (!p) return;
+                const msg = `🌿 Hi! I want to order *${p.name}* ($${p.price.toFixed(2)} USD).\n\n${p.description}\n\nPlease assist with delivery.`;
+                window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`, '_blank');
+            };
+
+            /* ── Close modal on backdrop click ── */
+            document.getElementById('order-modal').addEventListener('click', function (e) {
+                if (e.target === this) this.style.display = 'none';
+            });
+
+            /* ── Handle ?challenge= URL param ── */
+            function applyUrlChallenge() {
+                const params = new URLSearchParams(window.location.search);
+                const challenge = params.get('challenge');
+                if (challenge) {
+                    const search = document.getElementById('combo-search');
+                    if (search) {
+                        search.value = challenge.replace(/-/g, ' ');
+                        applyFilters();
+                    }
+                }
+            }
+
+            /* ── Init ── */
+            fetch('products.json')
+                .then(r => r.json())
+                .then(data => {
+                    allProducts = data;
+                    renderGrid(allProducts);
+                    document.getElementById('product-count').textContent = `${allProducts.length} products found`;
+                    applyUrlChallenge();
+                })
+                .catch(() => {
+                    document.getElementById('combo-grid').innerHTML =
+                        '<div style="text-align:center;padding:60px;grid-column:1/-1;color:#888;"><div style="font-size:2rem;">⚠️</div><p>Could not load products. <a href="https://wa.me/' + PHONE + '" style="color:#0a4f2e;">Order via WhatsApp</a></p></div>';
+                });
+
+            /* ── Event listeners ── */
+            document.getElementById('combo-search').addEventListener('input', applyFilters);
+            document.getElementById('combo-filter').addEventListener('change', applyFilters);
+            document.getElementById('sort-filter').addEventListener('change', applyFilters);
+
+        })();
+        </script>
 
         <!-- Global App Logic & WhatsApp Scripts -->
         <script>
