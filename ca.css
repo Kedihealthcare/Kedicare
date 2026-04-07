@@ -1,0 +1,20 @@
+ body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .cart-icon-container {
+            position: relative;
+            display: inline-block;
+        }
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #ef4444; /* red-500 */
+            color: white;
+            border-radius: 9999px; /* full rounded */
+            padding: 2px 8px;
+            font-size: 0.75rem; /* text-xs */
+            font-weight: 500; /* font-medium */
+            line-height: 1;
+        }
