@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account | Kedi Health AI</title>
+    <!-- CSS Includes -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome.all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="wishlist.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pi-color: #6a1b9a;
+            --pi-accent: #ffb100;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.4);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* Ambient background glow */
+        .ambient-glow {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(11, 155, 62, 0.15) 0%, rgba(106, 27, 154, 0.1) 100%);
+            filter: blur(80px);
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+        .glow-1 { top: -100px; right: -100px; }
+        .glow-2 { bottom: -100px; left: -100px; }
+
+        .auth-container {
+            width: 100%;
+            max-width: 450px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .auth-logo {
+            width: 120px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .auth-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .auth-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--kedi-dark);
+            margin-bottom: 8px;
+        }
+
+        .auth-subtitle {
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        /* Pi Network Login Button */
+        .pi-login-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 14px;
+            background: var(--pi-color);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 25px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 20px -5px rgba(106, 27, 154, 0.4);
+        }
+
+        .pi-login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -10px rgba(106, 27, 154, 0.6);
+            background: #5e1689;
+        }
+
+        .pi-icon {
+            font-size: 22px;
+            color: var(--pi-accent);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 25px 0;
+            color: #94a3b8;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .divider::before { margin-right: .5em; }
+        .divider::after { margin-left: .5em; }
+
+        /* Traditional Login */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 8px;
+            margin-left: 4px;
+        }
+
+        .input-wrap {
+            position: relative;
+        }
+
+        .input-wrap i {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 18px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 14px 16px 14px 48px;
+            background: rgba(255,255,255,0.6);
+            border: 1.5px solid #e2e8f0;
+            border-radius: 16px;
+            font-family: inherit;
+            font-size: 15px;
+            transition: all 0.3s;
+            outline: none;
+        }
+
+        .form-input:focus {
+            background: #fff;
+            border-color: var(--kedi-green);
+            box-shadow: 0 0 0 4px rgba(11, 155, 62, 0.1);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--kedi-green);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 10px 20px -5px rgba(11, 155, 62, 0.3);
+        }
+
+        .login-btn:hover {
+            background: var(--kedi-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -10px rgba(11, 155, 62, 0.5);
+        }
+
+        .auth-footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 15px;
+            color: #64748b;
+        }
+
+        .auth-link {
+            color: var(--kedi-green);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .auth-link:hover {
+            color: var(--kedi-dark);
+            text-decoration: underline;
+        }
+
+        /* Back to site */
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #64748b;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--kedi-dark);
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 480px) {
+            .auth-container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <a href="index.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Main Center
+    </a>
+
+    <div class="auth-container">
+        <div class="auth-header">
+            <a href="index.html">
+                <img src="logo.svg" alt="Kedi Health Logo" class="auth-logo">
+            </a>
+            <h1 class="auth-title">Welcome Back</h1>
+            <p class="auth-subtitle">Secure access to your wellness journey</p>
+        </div>
+
+        <!-- Pi Login Option -->
+        <button class="pi-login-btn" onclick="piLogin()">
+            <span class="pi-icon">π</span>
+            <span>Connect with Pi Network</span>
+        </button>
+
+        <div class="divider">or standard login</div>
+
+        <form onsubmit="console.log('Login submitted'); return false;">
+            <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <div class="input-wrap">
+                    <i class="far fa-envelope"></i>
+                    <input type="email" id="email" class="form-input" placeholder="name@example.com" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <div class="input-wrap">
+                    <i class="far fa-lock"></i>
+                    <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+                </div>
+            </div>
+
+            <div style="text-align: right; margin-bottom: 20px;">
+                <a href="#" class="auth-link" style="font-size: 13px;">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Log In</button>
+        </form>
+
+        <div class="auth-footer">
+            Don't have an account? <a href="#" class="auth-link">Create Account</a>
+        </div>
+    </div>
+
+    <!-- Live Time Display Logic Integration -->
+    <script src="TimeDisplay.js"></script>
+    <script>
+        function piLogin() {
+            // Mocking Pi Network Login
+            const btn = document.querySelector('.pi-login-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Authenticating...';
+            btn.style.opacity = '0.7';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                window.location.href = 'index.html?logged_in=true';
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>

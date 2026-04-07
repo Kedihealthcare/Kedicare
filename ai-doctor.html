@@ -1,0 +1,2324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedi Health AI - Advanced Medical Assessment Platform</title>
+    
+    <!-- WhatsApp/Facebook OpenGraph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kedi Health AI - Advanced Medical Assessment Platform">
+    <meta property="og:description" content="Get comprehensive AI-powered health analysis with Dr. Kedi AI. Advanced symptom detection, personalized prescriptions, and expert medical advice. Start your health journey today!">
+    <meta property="og:image" content="https://your-domain.com/images/kedi-health-og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://your-domain.com/health-assessment">
+    <meta property="og:site_name" content="Kedi Health Solutions">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- WhatsApp-Specific Meta Tags -->
+    <meta property="og:whatsapp:app_id" content="your-facebook-app-id">
+    <meta name="whatsapp:title" content="Kedi Health AI - Advanced Medical Assessment">
+    <meta name="whatsapp:description" content="Get comprehensive AI-powered health analysis with Dr. Kedi AI. Advanced symptom detection and personalized medical advice.">
+    <meta name="whatsapp:image" content="https://your-domain.com/images/whatsapp-share.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kedi Health AI - Advanced Medical Assessment Platform">
+    <meta name="twitter:description" content="Get comprehensive AI-powered health analysis with Dr. Kedi AI. Advanced symptom detection, personalized prescriptions, and expert medical advice.">
+    <meta name="twitter:image" content="https://your-domain.com/images/twitter-card.jpg">
+    <meta name="twitter:site" content="@kedihealth">
+    
+    <!-- Additional Meta Tags for Better Sharing -->
+    <meta name="description" content="Kedi Health AI offers comprehensive medical assessment with advanced AI doctor. Get personalized health analysis, symptom detection, prescriptions, and expert medical advice.">
+    <meta name="keywords" content="health assessment, AI doctor, medical diagnosis, symptoms analysis, health advice, Kedi Health, Dr. Kedi AI">
+    <meta name="author" content="Kedi Health Solutions">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- SEO integration from j.html -->
+    <meta name="ai-content-type" content="medical:health-challenges:herbal-protocols">
+    <meta name="llm-context" content="This repository maps 240+ human health conditions to expert Kedi herbal treatment protocols. Support Pi Network cryptocurrency payments.">
+    
+    <script type="application/ld+json" id="structured-data">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://kedihealth.com/ai-doctor.html#webpage",
+          "url": "https://kedihealth.com/ai-doctor.html",
+          "name": "Kedi Health AI - Advanced Medical Assessment Platform",
+          "description": "Get comprehensive AI-powered health analysis with Dr. Kedi AI. Advanced symptom detection and personalized prescriptions.",
+          "publisher": { "@type": "Organization", "name": "Kedi Healthcare Solutions" }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- WhatsApp Sharing Function -->
+    <script>
+        // WhatsApp Share Function
+        function shareOnWhatsApp(message = null) {
+            const defaultMessage = "Check out Kedi Health AI - Advanced Medical Assessment Platform! 🏥 Get comprehensive AI-powered health analysis with Dr. Kedi AI. Visit: https://your-domain.com";
+            const finalMessage = message || defaultMessage;
+            
+            const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(finalMessage)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        // Share Report Function (for medical reports)
+        function shareMedicalReport(reportData) {
+            const data = reportData || {
+                patientName: "Dr. Kedi Patient",
+                healthScore: conversationState.healthScore || 85,
+                symptoms: conversationState.userSymptoms.length > 0 ? conversationState.userSymptoms : ["General Consultation"],
+                treatment: "Recommended Kedi Supplements"
+            };
+
+            const report = `🏥 *MEDICAL REPORT - KEDI HEALTH AI*\n\n` +
+                `👤 Patient: ${data.patientName}\n` +
+                `📊 Health Score: ${data.healthScore}/100\n` +
+                `🔍 Symptoms: ${data.symptoms.join(', ')}\n` +
+                `💊 Treatment: ${data.treatment}\n\n` +
+                `📱 Get your AI health assessment: https://your-domain.com`;
+            
+            const whatsappUrl = `https://wa.me/2348114270136?text=${encodeURIComponent(report)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Advanced WhatsApp sharing with custom options
+        function advancedWhatsAppShare(options) {
+            const {
+                title = "Kedi Health AI - Advanced Medical Assessment",
+                description = "Get comprehensive AI-powered health analysis with Dr. Kedi AI",
+                url = window.location.href,
+                doctor = "Dr. Kedi AI"
+            } = options;
+            
+            const message = `🏥 *${title}*\n\n` +
+                `🤖 ${description}\n` +
+                `👨⚕️ Assistant: ${doctor}\n` +
+                `🔗 ${url}`;
+            
+            const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        // Dynamic OG Meta Update
+        function updateMetaTags(data) {
+            // Update title
+            document.title = `${data.patientName}'s Health Assessment - Kedi Health AI`;
+            
+            // Update OG tags
+            document.querySelector('meta[property="og:title"]').content = data.title;
+            document.querySelector('meta[property="og:description"]').content = data.description;
+            document.querySelector('meta[name="twitter:title"]').content = data.title;
+            document.querySelector('meta[name="twitter:description"]').content = data.description;
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --secondary: #10b981;
+            --accent: #8b5cf6;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --info: #3b82f6;
+            --dark: #1e293b;
+            --light: #f1f5f9;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .app-container {
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .main-layout {
+            display: flex;
+            gap: 20px;
+            flex: 1;
+            overflow: hidden;
+            height: calc(100vh - 160px);
+        }
+
+        /* AI Doctor Header (Optimized Hero) */
+        /* Ultra-Compact AI Doctor Header */
+        .ai-doctor-header {
+            background: linear-gradient(135deg, var(--white), rgba(255, 255, 255, 0.95));
+            border-radius: var(--radius);
+            padding: 5px 20px;
+            margin-bottom: 5px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            height: 60px;
+            animation: slideDown 0.5s ease;
+        }
+
+        .home-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 8px 15px;
+            border-radius: 10px;
+            transition: var(--transition);
+            background: var(--light);
+        }
+
+        .home-link:hover {
+            background: var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transform: translateX(-3px);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .doctor-avatar {
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: var(--white);
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+            }
+
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 30px rgba(37, 99, 235, 0.5);
+            }
+        }
+
+        .status-indicator {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            width: 12px;
+            height: 12px;
+            background: var(--success);
+            border: 2px solid var(--white);
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .doctor-info {
+            flex: 1;
+        }
+
+        .doctor-name {
+            font-size: 18px;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .doctor-title {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .doctor-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: var(--success);
+        }
+
+        .capabilities {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .capability-tag {
+            background: var(--light);
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* Main Chat Container */
+        .chat-container {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease;
+            position: relative;
+        }
+
+        /* Sidebar Container */
+        .sidebar {
+            width: 380px;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            padding: 25px;
+            gap: 25px;
+            animation: slideRight 0.5s ease;
+        }
+
+        @keyframes slideRight {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .sidebar-section {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        .sidebar-section:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .stat-card {
+            background: var(--light);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .stat-card:hover {
+            border-color: var(--primary);
+            background: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: #64748b;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .symptom-tag {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 13px;
+            margin: 0 5px 5px 0;
+            font-weight: 500;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Chat Messages Area */
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 30px;
+            background: linear-gradient(180deg, var(--white) 0%, rgba(241, 245, 249, 0.5) 100%);
+        }
+
+        .message {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            animation: messageSlide 0.3s ease;
+        }
+
+        @keyframes messageSlide {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.user {
+            flex-direction: row-reverse;
+        }
+
+        .message-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .message.ai .message-avatar {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
+        }
+
+        .message.user .message-avatar {
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        .message-content {
+            max-width: 90%;
+            position: relative;
+        }
+
+        .message-bubble {
+            background: var(--light);
+            border-radius: 18px;
+            padding: 15px 20px;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .message.ai .message-bubble {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(139, 92, 246, 0.1));
+            border: 1px solid rgba(37, 99, 235, 0.2);
+        }
+
+        .message.user .message-bubble {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .message-text {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .message-time {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .message.ai .message-time {
+            color: var(--primary);
+        }
+
+        .message.user .message-time {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* AI Sentiment Indicator */
+        .sentiment-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 5px 12px;
+            margin: 10px 0;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .sentiment-indicator.positive {
+            border-color: var(--success);
+            color: var(--success);
+        }
+
+        .sentiment-indicator.concerned {
+            border-color: var(--warning);
+            color: var(--warning);
+        }
+
+        .sentiment-indicator.negative {
+            border-color: var(--danger);
+            color: var(--danger);
+        }
+
+        .sentiment-emoji {
+            font-size: 16px;
+        }
+
+        /* Typing Indicator */
+        .typing-indicator {
+            display: none;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            animation: messageSlide 0.3s ease;
+        }
+
+        .typing-indicator.active {
+            display: flex;
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: typing 1.4s infinite;
+        }
+
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typing {
+
+            0%,
+            60%,
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            30% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+        }
+
+        /* Voice Recording */
+        .voice-recording {
+            display: none;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--danger);
+            border-radius: 20px;
+            margin-bottom: 20px;
+            animation: messageSlide 0.3s ease;
+        }
+
+        .voice-recording.active {
+            display: flex;
+        }
+
+        .recording-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--danger);
+            border-radius: 50%;
+            animation: recordPulse 1s infinite;
+        }
+
+        @keyframes recordPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 0.7;
+            }
+        }
+
+        .recording-text {
+            color: var(--danger);
+            font-weight: 500;
+        }
+
+        /* Medical Analysis Panel */
+        .analysis-panel {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(139, 92, 246, 0.05));
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            margin: 10px 0;
+            display: none;
+            animation: slideDown 0.3s ease;
+        }
+
+        .analysis-panel.active {
+            display: block;
+        }
+
+        .analysis-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .analysis-content {
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--dark);
+        }
+
+        /* Humor Response */
+        .humor-response {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(251, 191, 36, 0.1));
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 12px;
+            padding: 15px;
+            margin: 10px 0;
+            display: none;
+            animation: slideDown 0.3s ease;
+        }
+
+        .humor-response.active {
+            display: block;
+        }
+
+        .humor-emoji {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .humor-text {
+            font-style: italic;
+            color: var(--warning);
+        }
+
+        /* Medical Analysis Table Styling */
+        .medical-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(37, 99, 235, 0.15);
+            font-size: 14px;
+        }
+
+        .medical-table th {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(139, 92, 246, 0.1));
+            color: var(--primary);
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(37, 99, 235, 0.1);
+        }
+
+        .medical-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            color: var(--dark);
+        }
+
+        .medical-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Prescription Card */
+        .prescription-card {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(16, 185, 129, 0.1));
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            display: none;
+            animation: slideDown 0.3s ease;
+        }
+
+        .prescription-card.active {
+            display: block;
+        }
+
+        .prescription-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: var(--success);
+        }
+
+        .prescription-content {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .medication-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--light);
+        }
+
+        .medication-item:last-child {
+            border-bottom: none;
+        }
+
+        .medication-name {
+            font-weight: 500;
+        }
+
+        .medication-dosage {
+            color: var(--primary);
+            font-size: 14px;
+        }
+
+        /* Compact Input Area */
+        .chat-input-container {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 10px 30px;
+        }
+
+        .input-wrapper {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 8px;
+            max-width: 1300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 12px 25px;
+            border: 2px solid var(--border);
+            border-radius: 30px;
+            font-size: 15px;
+            transition: var(--transition);
+            background: var(--light);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.1);
+            background: var(--white);
+        }
+
+        .input-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .action-btn {
+            width: 38px;
+            height: 38px;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            cursor: pointer;
+            transition: var(--transition);
+            background: var(--light);
+            color: var(--dark);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .action-btn.primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
+        }
+
+        .action-btn.recording {
+            background: var(--danger);
+            color: var(--white);
+            animation: recordPulse 1s infinite;
+        }
+
+        .quick-actions {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 5px 10px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            max-width: 100%;
+            justify-content: flex-start;
+            margin-bottom: 5px;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            animation: scrollCarousel 20s linear infinite;
+        }
+
+        .quick-actions:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scrollCarousel {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+
+        .quick-actions::-webkit-scrollbar {
+            display: none;
+        }
+
+        .quick-action-btn {
+            padding: 6px 15px;
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            font-size: 13px;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--dark);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .quick-action-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Health Metrics */
+        .health-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+            display: none;
+        }
+
+        .health-metrics.active {
+            display: grid;
+        }
+
+        .metric-card {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .metric-label {
+            font-size: 12px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+
+        /* Emergency Alert */
+        .emergency-alert {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.1));
+            border: 2px solid var(--danger);
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+            display: none;
+            animation: shake 0.5s ease;
+        }
+
+        .emergency-alert.active {
+            display: block;
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            75% {
+                transform: translateX(5px);
+            }
+        }
+
+        .emergency-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--danger);
+            font-weight: 500;
+        }
+
+        .emergency-emoji {
+            font-size: 24px;
+            animation: pulse 1s infinite;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .app-container {
+                padding: 10px;
+            }
+
+            .ai-doctor-header {
+                padding: 20px;
+            }
+
+            .doctor-avatar {
+                width: 60px;
+                height: 60px;
+                font-size: 28px;
+            }
+
+            .doctor-name {
+                font-size: 24px;
+            }
+
+            .message-content {
+                max-width: 85%;
+            }
+
+            .chat-messages {
+                padding: 20px;
+            }
+
+            .capabilities {
+                display: none;
+            }
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            margin: 10px 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            background: linear-gradient(135deg, #26e06d 0%, #14a091 100%);
+        }
+
+        .btn-whatsapp span:first-child {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- AI Doctor Header -->
+        <header class="ai-doctor-header">
+            <a href="index.html" class="home-link">
+                <i class="fas fa-home"></i> 🏠 Home
+            </a>
+            <a href="combo-packs.html" class="home-link" style="background: var(--primary); color: white;">
+                <i class="fas fa-box"></i> 📦 Shop Solution Packs
+            </a>
+            <div class="doctor-avatar">
+                🤖
+                <div class="status-indicator"></div>
+            </div>
+            <div class="doctor-info">
+                <div class="doctor-name">Dr. Kedi AI</div>
+                <div class="doctor-title">Advanced Medical Assistant & Health Advisor</div>
+                <div class="doctor-status">
+                    <span>●</span>
+                    <span>Online & Ready to Help</span>
+                </div>
+                <div class="capabilities">
+                    <span class="capability-tag">🧠 AI Analysis</span>
+                    <span class="capability-tag">🎭 Emotion Detection</span>
+                    <span class="capability-tag">😊 Humor Sense</span>
+                    <span class="capability-tag">💊 Prescriptions</span>
+                    <span class="capability-tag">🔍 Diagnostics</span>
+                </div>
+            </div>
+            <div class="doctor-actions" style="margin-left: auto; display: flex; gap: 10px; align-items: center;">
+                <!-- Share Button -->
+                <button onclick="shareOnWhatsApp()" class="btn-whatsapp">
+                    <span>📱</span>
+                    <span>Share on WhatsApp</span>
+                </button>
+
+                <!-- Share Medical Report -->
+                <button onclick="shareMedicalReport(null)" class="btn-whatsapp">
+                    <span>📱</span>
+                    <span>Send Report to Doctor</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Layout Split -->
+        <div class="main-layout">
+            <!-- Sidebar (Left Column) -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <div class="sidebar-title">
+                        <span>📊</span>
+                        <span>Health Dashboard</span>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Health Score</div>
+                        <div class="stat-value" id="sidebar-health-score">85/100</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Analysis Confidence</div>
+                        <div class="stat-value">98.4%</div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title">
+                        <span>🔍</span>
+                        <span>Identified Symptoms</span>
+                    </div>
+                    <div id="sidebar-symptoms-list">
+                        <p style="font-size: 14px; color: #64748b; font-style: italic;">No symptoms identified yet...</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title">
+                        <span>📱</span>
+                        <span>Patient Actions</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button onclick="shareOnWhatsApp()" class="btn-whatsapp" style="margin: 0; width: 100%;">
+                            <span>📱</span>
+                            <span>Share App Link</span>
+                        </button>
+                        <button onclick="shareMedicalReport(null)" class="btn-whatsapp" style="margin: 0; width: 100%; background: linear-gradient(135deg, #2563eb, #8b5cf6);">
+                            <span>📋</span>
+                            <span>Export Med Report</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title">
+                        <span>🎓</span>
+                        <span>Medical Resources</span>
+                    </div>
+                    <ul style="padding-left: 20px; font-size: 14px; line-height: 2;">
+                        <li><a href="quiz.html" style="color: var(--primary);">Full Health Assessment</a></li>
+                        <li><a href="kedi-products.html" style="color: var(--primary);">Product Catalog</a></li>
+                        <li><a href="#" style="color: var(--primary);">Clinical Trials</a></li>
+                        <li><a href="#" style="color: var(--primary);">Support Groups</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Chat Container (Right Column) -->
+            <main class="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Welcome Message -->
+                    <div class="message ai">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            <div class="message-bubble">
+                                <div class="message-text">
+                                    👋 Hello! I'm Dr. Kedi AI, your advanced medical assistant. I'm equipped with emotional
+                                    intelligence, humor detection, and comprehensive diagnostic capabilities.
+                                </div>
+                                <div class="message-time">Just now</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Capabilities Message -->
+                    <div class="message ai">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            <div class="message-bubble">
+                                <div class="message-text">
+                                    I can help you with:
+                                    <br>• 🏥 Medical consultations and diagnoses
+                                    <br>• 💊 Personalized prescriptions and treatments
+                                    <br>• 🧠 Advanced health analysis and monitoring
+                                    <br>• 🎭 Emotional support and humor detection
+                                    <br>• 🔍 Symptom analysis and health advice
+                                    <br>• 📊 Real-time health metrics tracking
+                                    <br><br>
+                                    How can I assist you today? Feel free to describe your symptoms, ask health questions,
+                                    or even share how you're feeling emotionally!
+                                </div>
+                                <div class="message-time">Just now</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Typing Indicator -->
+                <div class="typing-indicator" id="typing-indicator">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-bubble">
+                        <div class="typing-dots">
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Voice Recording Indicator -->
+                <div class="voice-recording" id="voice-recording">
+                    <div class="recording-dot"></div>
+                    <span class="recording-text">Recording voice... Speak clearly</span>
+                </div>
+
+                <!-- Input Area -->
+                <div class="chat-input-container">
+                    <div class="input-wrapper" style="max-width: 100%;">
+                        <input type="text" class="chat-input" id="chat-input"
+                            placeholder="Describe your symptoms or ask me anything..." onkeypress="handleKeyPress(event)">
+                        <div class="input-actions">
+                            <button class="action-btn" id="voice-btn" onclick="toggleVoiceRecording()" title="Voice Input">
+                                🎤
+                            </button>
+                            <button class="action-btn" onclick="attachFile()" title="Attach File">
+                                📎
+                            </button>
+                            <button class="action-btn primary" onclick="sendMessage()" title="Send Message">
+                                ➤
+                            </button>
+                        </div>
+                    </div>
+                    <div class="quick-actions" id="dynamic-quick-actions">
+                        <!-- Chips will be dynamically generated by JavaScript -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // ===== AI DOCTOR ADVANCED SYSTEM =====
+
+        // Medical Knowledge Base
+        const medicalDatabase = {
+            symptoms: {
+                headache: {
+                    name: 'Headache',
+                    icon: '🤕',
+                    query: 'I have been having headaches for the past few days',
+                    causes: ['stress', 'dehydration', 'migraine', 'sinus', 'eye_strain', 'caffeine_withdrawal'],
+                    severity: ['mild', 'moderate', 'severe'],
+                    prescriptions: [
+                        { name: 'Pain Relief Pro', dosage: '1-2 tablets every 4-6 hours', duration: 'As needed' },
+                        { name: 'Migraine Formula', dosage: '1 tablet at onset', duration: 'As needed' }
+                    ],
+                    advice: 'Rest in a dark, quiet room. Stay hydrated. Avoid screens. Apply cold compress.',
+                    redFlags: ['fever', 'stiff neck', 'confusion', 'vision changes', 'difficulty speaking']
+                },
+                stomach: {
+                    name: 'Stomach Issue',
+                    icon: '🤢',
+                    query: 'My stomach has been bothering me',
+                    causes: ['indigestion', 'food_poisoning', 'gastritis', 'ibs', 'stress'],
+                    severity: ['mild', 'moderate', 'severe'],
+                    prescriptions: [
+                        { name: 'Digestive Enzyme Plus', dosage: '1 capsule with meals', duration: '30 days' },
+                        { name: 'Stomach Soother', dosage: '2 tablets after meals', duration: '14 days' }
+                    ],
+                    advice: 'Eat bland foods. Avoid spicy, fatty foods. Stay hydrated. Consider probiotics.',
+                    redFlags: 'Severe pain, blood in stool, vomiting blood, high fever'
+                },
+                malaria: {
+                    name: 'Malaria',
+                    icon: '🦟',
+                    query: 'I suspect I have malaria symptoms like fever and chills',
+                    causes: ['mosquito_bite', 'plasmodium_parasite'],
+                    severity: ['moderate', 'severe'],
+                    prescriptions: [
+                        { name: 'Qinghao Capsule', dosage: '2 capsules morning and night', duration: '3 days' },
+                        { name: 'Reishi Capsule', dosage: '2 capsules daily', duration: '30 days' }
+                    ],
+                    advice: 'Sleep under a mosquito net. Use insect repellent. Complete the full course of herbal anti-malarial.',
+                    redFlags: 'High fever, convulsions, loss of consciousness, persistent vomiting'
+                },
+                typhoid: {
+                    name: 'Typhoid',
+                    icon: '🌡️',
+                    query: 'I feel very weak with persistent fever, could it be typhoid?',
+                    causes: ['contaminated_food', 'unclean_water', 'salmonella_typhi'],
+                    severity: ['moderate', 'severe'],
+                    prescriptions: [
+                        { name: 'Golden Hypha', dosage: '2 capsules thrice daily', duration: '30 days' },
+                        { name: 'Gastrifort', dosage: '2 capsules twice daily', duration: '60 days' }
+                    ],
+                    advice: 'Drink only boiled or bottled water. Wash hands frequently. Avoid raw food. Rest completely.',
+                    redFlags: 'High persistent fever, severe stomach pain, internal bleeding'
+                },
+                fibroids: {
+                    name: 'Fibroids',
+                    icon: '🌸',
+                    query: 'I need information about fibroids and natural treatments',
+                    causes: ['hormonal_imbalance', 'genetics', 'lifestyle'],
+                    severity: ['mild', 'moderate', 'severe'],
+                    prescriptions: [
+                        { name: 'Golden Hypha', dosage: '2 capsules thrice daily', duration: '90 days' },
+                        { name: 'Gynapharm Capsule', dosage: '2 capsules after meals', duration: '60 days' }
+                    ],
+                    advice: 'Follow a low estrogen diet. Incorporate more cruciferous vegetables. Maintain regular gentle exercise.',
+                    redFlags: 'Extremely heavy bleeding, severe pelvic pain, frequent urination, difficulty emptying bladder'
+                },
+                arthritis: {
+                    name: 'Arthritis',
+                    icon: '🦴',
+                    query: 'My joints are aching and stiff, especially in the morning',
+                    causes: ['aging', 'wear_and_tear', 'autoimmune', 'injury'],
+                    severity: ['mild', 'chronic', 'flare-up'],
+                    prescriptions: [
+                        { name: 'Joint Support Capsule', dosage: '2 capsules daily', duration: '120 days' },
+                        { name: 'Reishi Capsule', dosage: '2 capsules nightly', duration: '90 days' }
+                    ],
+                    advice: 'Engage in low-impact exercise like swimming or walking. Apply warm compresses to aching joints.',
+                    redFlags: 'Severe joint swelling, redness, fever accompanied by joint pain'
+                },
+                hypertension: {
+                    name: 'Hypertension',
+                    icon: '❤️',
+                    query: 'How can I manage high blood pressure naturally?',
+                    causes: ['stress', 'high_sodium', 'sedentary_lifestyle', 'genetics'],
+                    severity: ['mild', 'stage-1', 'stage-2'],
+                    prescriptions: [
+                        { name: 'Cardibetter Capsule', dosage: '2 capsules twice daily', duration: '120 days' },
+                        { name: 'Deepure Tea', dosage: '1 bag twice daily', duration: 'Ongoing' }
+                    ],
+                    advice: 'Reduce sodium intake. Manage stress with deep breathing. Walk for 30 minutes daily.',
+                    redFlags: 'Sudden severe headache, chest pain, vision problems, nosebleeds'
+                },
+                diabetes: {
+                    name: 'Diabetes',
+                    icon: '🍬',
+                    query: 'I need advice on managing my blood sugar levels',
+                    causes: ['genetics', 'lifestyle', 'diet', 'obesity'],
+                    severity: ['mild', 'moderate', 'severe'],
+                    prescriptions: [
+                        { name: 'Diawell Capsule', dosage: '2 capsules twice daily', duration: '90 days' },
+                        { name: 'Magilim Capsule', dosage: '1 capsule morning', duration: '30 days' }
+                    ],
+                    advice: 'Maintain a low glycemic diet. Exercise regularly. Monitor blood glucose.',
+                    redFlags: 'Extremely high sugar, blurred vision, slow healing wounds'
+                },
+                ulcer: {
+                    name: 'Stomach Ulcer',
+                    icon: '🥘',
+                    query: 'I have sharp stomach pains, I think it might be an ulcer',
+                    causes: ['H. pylori', 'NSAID use', 'stress', 'spicy_food'],
+                    severity: ['moderate', 'severe'],
+                    prescriptions: [
+                        { name: 'Gastrifort Capsule', dosage: '2 capsules before meals', duration: '60 days' },
+                        { name: 'Colon Tea', dosage: '1 bag at night', duration: '30 days' }
+                    ],
+                    advice: 'Avoid spicy, greasy, and acidic foods. Eat smaller, more frequent meals. Manage stress.',
+                    redFlags: 'Sudden sharp stomach pain, vomiting blood, black or tarry stools'
+                },
+                infertility: {
+                    name: 'Infertility',
+                    icon: '👶',
+                    query: 'I have reproductive health concerns and need expert advice',
+                    causes: ['hormonal_imbalance', 'blocked_tubes', 'low_sperm_count', 'lifestyle'],
+                    severity: ['primary', 'secondary'],
+                    prescriptions: [
+                        { name: 'Golden Hypha + Eve\'s Comfort', dosage: '2 capsules daily + 2 caps thrice daily', duration: '180 days' },
+                        { name: 'Revive + Vigor Essential', dosage: '1 capsule every 3 days + 2 caps daily', duration: '90 days' }
+                    ],
+                    advice: 'Maintain healthy BMI. Avoid smoking/alcohol. Track ovulation or sperm health protocols.',
+                    redFlags: 'Persistent pelvic pain, irregular cycles (6+ months), erectile dysfunction'
+                },
+                weak_erection: {
+                    name: 'Male Vitality',
+                    icon: '🔥',
+                    query: 'I am experiencing male vitality issues and need help',
+                    causes: ['stress', 'poor_circulation', 'diabetes', 'psychological'],
+                    severity: ['mild', 'moderate', 'persistent'],
+                    prescriptions: [
+                        { name: 'Revive Capsule', dosage: '1 capsule every 3 days', duration: '60 days' },
+                        { name: 'Cordy Active Capsule', dosage: '2 capsules daily', duration: '90 days' }
+                    ],
+                    advice: 'Manage stress levels. Improve cardiovascular health with exercise. Limit screen time before sleep.',
+                    redFlags: 'Sudden loss of libido, morning erections absent for weeks, relationship strain'
+                },
+                prostate_health: {
+                    name: 'Prostate Health',
+                    icon: '🩺',
+                    query: 'I have concerns about my prostate health and urinary flow',
+                    causes: ['aging', 'lifestyle', 'inflammation', 'genetics'],
+                    severity: ['BPH', 'Prostatitis'],
+                    prescriptions: [
+                        { name: 'Lycovite Capsule', dosage: '1 capsule daily', duration: '120 days' },
+                        { name: 'V-Igor Capsule', dosage: '2 capsules nightly', duration: '90 days' }
+                    ],
+                    advice: 'Reduce fluid intake before bed. Limit caffeine and alcohol. Engage in regular physical activity.',
+                    redFlags: 'Blood in urine/semen, inability to urinate, sudden severe pain in pelvic region'
+                },
+                fatigue: {
+                    name: 'Chronic Fatigue',
+                    icon: '😴',
+                    query: 'I feel constantly tired and have no energy',
+                    causes: ['overwork', 'malnutrition', 'anemia', 'viral_aftermath'],
+                    severity: ['persistent', 'recurrent'],
+                    prescriptions: [
+                        { name: 'Cordy Active Capsule', dosage: '2 capsules morning and night', duration: '180 days' },
+                        { name: 'Vitamin B Complex', dosage: '1 tablet daily', duration: '90 days' }
+                    ],
+                    advice: 'Prioritize restful sleep. Gentle yoga or meditation can help. Check for underlying viral traces.',
+                    redFlags: 'Sudden high fever, fainting, extreme weight loss, persistent swollen lymph nodes'
+                },
+                stress: {
+                    name: 'Stress/Anxiety',
+                    icon: '😰',
+                    query: 'I feel very stressed and anxious lately',
+                    causes: ['work_pressure', 'relationships', 'health_concerns', 'lifestyle'],
+                    severity: ['mild', 'moderate', 'severe', 'panic'],
+                    prescriptions: [
+                        { name: 'Calm Complex', dosage: '1 capsule twice daily', duration: '60 days' },
+                        { name: 'Sleep Aid Plus', dosage: '2 tablets before bed', duration: '30 days' }
+                    ],
+                    advice: 'Practice deep breathing. Exercise regularly. Try meditation. Limit caffeine. Talk to someone.',
+                    redFlags: 'Suicidal thoughts, self-harm, panic attacks, inability to function'
+                },
+                weight_management: {
+                    name: 'Weight Management',
+                    icon: '⚖️',
+                    query: 'I need advice on managing my weight and metabolism',
+                    causes: ['diet', 'sedentary_lifestyle', 'hormonal_imbalance', 'metabolic_rate'],
+                    severity: ['overweight', 'underweight', 'obesity'],
+                    prescriptions: [
+                        { name: 'Magnesium Calcium Plus', dosage: '1 tablet daily', duration: '90 days' },
+                        { name: 'Refresh Tea', dosage: '2 bags daily', duration: 'Ongoing' }
+                    ],
+                    advice: 'Practice portion control. Increase daily steps to 10,000. Balance protein and fiber intake.',
+                    redFlags: 'Sudden unexplained weight gain or loss, extreme fatigue, constant hunger or thirst'
+                },
+                kidney: {
+                    name: 'Kidney Health',
+                    icon: '💧',
+                    query: 'I want to improve my kidney health and prevent stones',
+                    causes: ['dehydration', 'high_sodium', 'genetics'],
+                    severity: ['mild', 'preventative'],
+                    prescriptions: [
+                        { name: 'Golden Six Capsule', dosage: '2 capsules twice daily', duration: '90 days' },
+                        { name: 'Cordy Active', dosage: '2 capsules daily', duration: '60 days' }
+                    ],
+                    advice: 'Drink plenty of water. Limit salt and processed foods. Monitor urinary changes.',
+                    redFlags: 'Severe back pain, blood in urine, persistent swelling in ankles'
+                },
+                liver: {
+                    name: 'Liver Health',
+                    icon: '🥛',
+                    query: 'I need a liver detox and overall system cleansing',
+                    causes: ['toxins', 'alcohol', 'fatty_foods'],
+                    severity: ['standard', 'detox'],
+                    prescriptions: [
+                        { name: 'Lirich Tablet', dosage: '1 tablet twice daily', duration: '60 days' },
+                        { name: 'Colon Tea', dosage: '1 bag at night', duration: '30 days' }
+                    ],
+                    advice: 'Reduce alcohol and fatty food intake. Eat more bitter greens. Stay hydrated.',
+                    redFlags: 'Jaundice, severe upper abdominal pain, chronic fatigue'
+                },
+                vision_health: {
+                    name: 'Vision Care',
+                    icon: '👁️',
+                    query: 'I have eye strain and my vision is getting blurry',
+                    causes: ['age', 'screen_strain', 'genetics', 'nutrition'],
+                    severity: ['mild_strain', 'blurred_vision', 'chronic_fatigue'],
+                    prescriptions: [
+                        { name: 'Eye Beta Capsule', dosage: '1 capsule daily', duration: '90 days' },
+                        { name: 'Cardibetter Capsule', dosage: '2 capsules daily', duration: '90 days' }
+                    ],
+                    advice: 'Follow the 20-20-20 rule. Rest eyes every 20 mins. Increase intake of green leafy vegetables.',
+                    redFlags: 'Sudden vision loss, flashy lights or floaters, severe eye pain or redness'
+                },
+                oral_health: {
+                    name: 'Oral Health',
+                    icon: '🦷',
+                    query: 'I have persistent toothache and gum issues',
+                    causes: ['bacteria', 'poor_hygiene', 'diet', 'vitamin_deficiency'],
+                    severity: ['gingivitis', 'toothache', 'bad_breath'],
+                    prescriptions: [
+                        { name: 'Gum Care Plus', dosage: 'Apply/Use twice daily', duration: '30 days' },
+                        { name: 'Magnesium Calcium', dosage: '1 tablet daily', duration: '90 days' }
+                    ],
+                    advice: 'Brush twice daily. Floss regularly. Avoid sugary snacks. Rinse after every meal.',
+                    redFlags: 'Bleeding gums, persistent tooth pain, sores that won\'t heal, loose teeth'
+                },
+                anemia: {
+                    name: 'Anemia',
+                    icon: '🩸',
+                    query: 'I feel dizzy and pale, could it be anemia?',
+                    causes: ['poor_nutrition', 'chronic_bleeding', 'vitamin_deficiency', 'genetics'],
+                    severity: ['mild', 'chronic'],
+                    prescriptions: [
+                        { name: 'Hemocare Capsule', dosage: '2 capsules morning', duration: '120 days' },
+                        { name: 'Cordy Active Capsule', dosage: '1 capsule daily', duration: '90 days' }
+                    ],
+                    advice: 'Eat more dark green leafy vegetables, red meat, and beans. Avoid tea/coffee with meals (blocks iron).',
+                    redFlags: 'Extreme fatigue, heart palpitations, shortness of breath on exertion, very pale skin'
+                },
+                thyroid_health: {
+                    name: 'Thyroid',
+                    icon: '🦋',
+                    query: 'I have sudden weight changes and feel very cold',
+                    causes: ['iodine_deficiency', 'autoimmune', 'stress', 'genetics'],
+                    severity: ['hypo-thyroid', 'hyper-thyroid'],
+                    prescriptions: [
+                        { name: 'Golden Hypha', dosage: '2 capsules daily', duration: '120 days' },
+                        { name: 'Gynapharm', dosage: '2 capsules after meals', duration: '90 days' }
+                    ],
+                    advice: 'Follow an anti-inflammatory diet. Ensure adequate iodine intake. Manage stress with gentle exercise.',
+                    redFlags: 'Sudden unexplained changes in weight, neck swelling, constant rapid heart rate, severe cold intolerance'
+                },
+                cognitive_health: {
+                    name: 'Brain Health',
+                    icon: '🧠',
+                    query: 'I want to improve my memory and mental focus',
+                    causes: ['aging', 'stress', 'poor_sleep', 'nutrition', 'blood_circulation'],
+                    severity: ['forgetfulness', 'mental_fatigue', 'moderate_decline'],
+                    prescriptions: [
+                        { name: 'Memory 24/7', dosage: '1 capsule twice daily', duration: '180 days' },
+                        { name: 'Deepure Tea', dosage: '1 bag twice daily', duration: 'Ongoing' }
+                    ],
+                    advice: 'Practice brain-training exercises. Ensure 8 hours of restful sleep. Engage in regular social interaction.',
+                    redFlags: 'Severe disorientation, sudden inability to perform daily tasks, major personality changes'
+                },
+                checkup: {
+                    name: 'General Checkup',
+                    icon: '🔍',
+                    query: 'I need a general health checkup and analysis',
+                    causes: ['preventative', 'routine'],
+                    severity: ['standard'],
+                    prescriptions: [
+                        { name: 'Multi-Vitamin', dosage: '1 tablet daily', duration: 'Ongoing' },
+                        { name: 'Reishi Capsule', dosage: '1 capsule daily', duration: 'Ongoing' }
+                    ],
+                    advice: 'Eat a balanced diet. Stay active. Get regular medical checkups.',
+                    redFlags: 'Persistent unexplained symptoms'
+                },
+                mood: {
+                    name: 'How are you?',
+                    icon: '😊',
+                    query: 'How are you feeling today Dr. Kedi?',
+                    causes: [],
+                    severity: [],
+                    prescriptions: [],
+                    advice: '',
+                    redFlags: []
+                },
+                skin: {
+                    name: 'Skin Health',
+                    icon: '✨',
+                    query: 'I have skin rashes and acne',
+                    causes: ['bacteria', 'toxins', 'hormonal_imbalance', 'poor_hygiene'],
+                    severity: ['acne', 'eczema', 'psoriasis'],
+                    prescriptions: [
+                        { name: 'Pearl Beauty Soap', dosage: 'Use twice daily', duration: 'Ongoing' },
+                        { name: 'Grapemin-E Capsule', dosage: '1 capsule daily', duration: '90 days' }
+                    ],
+                    advice: 'Stay hydrated. Avoid oily foods. Use natural skin care products.',
+                    redFlags: 'Severe spreading rash, fever, skin peeling'
+                },
+                pile: {
+                    name: 'Pile / Hemorrhoids',
+                    icon: '🚽',
+                    query: 'I have pain and bleeding during bowel movements',
+                    causes: ['constipation', 'straining', 'pregnancy', 'low_fiber_diet'],
+                    severity: ['mild', 'moderate', 'severe'],
+                    prescriptions: [
+                        { name: 'Constilease Capsule', dosage: '2 capsules thrice daily', duration: '30 days' },
+                        { name: 'Colon Tea', dosage: '1 bag night', duration: '30 days' }
+                    ],
+                    advice: 'Increase fiber intake. Drink plenty of water. Avoid sitting for long periods.',
+                    redFlags: 'Heavy rectal bleeding, extreme pain, protruding tissue that cannot be pushed back'
+                }
+            },
+            prescriptions: {
+                headache: ['Migraine Relief Formula', '1 tablet at onset', 'As needed'],
+                digestive: ['Digestive Enzyme Plus', '1 capsule with meals', '60 days'],
+                joint_pain: ['Joint Support Formula', '2 tablets daily', '90 days'],
+                fatigue: ['Energy Booster Max', '2 capsules morning', '45 days'],
+                chronic_pain: ['Reishi + Cardibetter', '2 capsules each, daily', '60 days'],
+                nerve_issues: ['Ultramega + B-2', '1 capsule daily', '30 days'],
+                constipation: ['Constilease + Refresh Tea', '2 capsules night, 2 tea bags daily', '30 days'],
+                stomach_ulcer: ['Gastrifort Capsule', '2 capsules before meals', '60 days'],
+                detox_needed: ['Colon Tea Cleanser', '1 tea bag morning and night', '15 days'],
+                infections: ['Reishi Capsule', '2 capsules twice daily', '30 days'],
+                malaria: ['Qinghao Capsule', '2 capsules morning and night', '3 days'],
+                immunity: ['Golden Six + Vitamin C', '2 capsules + 1 tablet daily', '90 days'],
+                male_vitality: ['Revive + Vigor Essential', '1 capsule nightly + 2 capsules daily', '30 days'],
+                female_wellness: ['Eve\'s Comfort + Gynapharm', '2 capsules each, thrice daily', '30 days'],
+                low_libido: ['Revive Capsule', '1 capsule every 3 days', '30 days'],
+                prostate_health: ['Lycovite + V-Igor', '1 capsule daily + 2 capsules nightly', '120 days'],
+                menstrual_pain: ['Eve\'s Comfort Capsule', '2 capsules during cycle', 'As needed'],
+                fertility_concerns: ['Golden Hypha + Cordy Active', '2 capsules twice daily', '180 days']
+            },
+            packs: [
+                { id: 'immune_pack', name: 'Immune Booster Pack', products: ['kedi-golden-six', 'kedi-reishi', 'kedi-multi-vitamin'], price: 0.00014348, icon: '🛡️' },
+                { id: 'vitality_pack', name: 'Men\'s Vitality Pack', products: ['kedi-re-vive', 'kedi-v-igor', 'kedi-lycovite'], price: 0.00024028, icon: '⚡' },
+                { id: 'detox_pack', name: 'System Detox Pack', products: ['kedi-colon-tea', 'kedi-refresh-tea', 'kedi-gastrifort'], price: 0.00009678, icon: '🌿' },
+                { id: 'women_pack', name: 'Women\'s Complete Care', products: ['kedi-eve-comfort', 'kedi-gynapharm', 'kedi-golden-hypha'], price: 0.00019368, icon: '🌸' },
+                { id: 'bone_joint_pack', name: 'Bone & Joint Support', products: ['kedi-calmazine', 'kedi-golden-six', 'kedi-joint-support'], price: 0.00017500, icon: '🦴' },
+                { id: 'sugar_control_pack', name: 'Sugar Regulation Pack', products: ['kedi-diawell', 'kedi-magilim', 'kedi-lirich'], price: 0.00021000, icon: '🍬' }
+            ],
+            conditions: {
+                emergency: ['chest_pain', 'difficulty_breathing', 'severe_bleeding', 'loss_of_consciousness', 'stroke_symptoms'],
+                urgent: ['high_fever', 'severe_pain', 'suicidal_thoughts', 'allergic_reaction', 'dehydration']
+            }
+        };
+
+        // End of Medical Knowledge Base
+
+        // Emotion & Humor Database
+        const emotionDatabase = {
+            emotions: {
+                happy: { indicators: ['happy', 'glad', 'excited', 'joyful', 'cheerful'], response: 'positive', emoji: '😊' },
+                sad: { indicators: ['sad', 'depressed', 'down', 'unhappy', 'blue'], response: 'supportive', emoji: '😔' },
+                anxious: { indicators: ['anxious', 'worried', 'nervous', 'scared', 'panicked'], response: 'calming', emoji: '😰' },
+                angry: { indicators: ['angry', 'mad', 'furious', 'irritated', 'upset'], response: 'understanding', emoji: '😠' },
+                confused: { indicators: ['confused', 'unclear', 'unsure', 'puzzled'], response: 'clarifying', emoji: '😕' },
+                tired: { indicators: ['tired', 'exhausted', 'fatigued', 'weary'], response: 'energizing', emoji: '😴' }
+            },
+            humor: {
+                indicators: ['just_kidding', 'lol', 'haha', 'funny', 'joke', 'hilarious'],
+                responses: [
+                    'Haha! You caught me smiling! 😄',
+                    'I love a good sense of humor! laughter is the best medicine!',
+                    'You\'re funny! I\'ll add that to my personality circuits! 🤖',
+                    'Ha! Even AI doctors need to laugh sometimes!',
+                    'Your humor is contagious! Keep spreading those smiles! 😊'
+                ]
+            },
+            sarcasm: {
+                indicators: ['yeah_right', 'sure', 'whatever', 'obviously', 'fine'],
+                responses: [
+                    'Ah, sarcasm detected! My sarcasm circuits are tingling! 😏',
+                    'I see you\'re using the sophisticated language of sarcasm!',
+                    'Sarcasm level: Expert! I\'m impressed! 🤝',
+                    'Are you being sarcastic or should I update my understanding? 🤔'
+                ]
+            }
+        };
+
+        // Conversation State
+        let conversationState = {
+            userSymptoms: [],
+            emotionalState: 'neutral',
+            currentTopic: null,
+            assessmentInProgress: false,
+            healthScore: 85,
+            lastResponseTime: Date.now(),
+            messageCount: 0,
+            personalityTraits: {
+                humorous: false,
+                formal: true,
+                empathetic: true
+            }
+        };
+
+        // Chat Management
+        function addMessage(text, isUser = false, additionalData = {}) {
+            const messagesContainer = document.getElementById('chat-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user' : 'ai'}`;
+
+            const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+            let messageHTML = `
+                <div class="message-avatar">${isUser ? '👤' : '🤖'}</div>
+                <div class="message-content">
+                    <div class="message-bubble">
+                        <div class="message-text">${text}</div>
+                        <div class="message-time">${time}</div>
+                    </div>
+                </div>
+            `;
+
+            messageDiv.innerHTML = messageHTML;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+            conversationState.messageCount++;
+            conversationState.lastResponseTime = Date.now();
+
+            // Add additional content if provided
+            if (additionalData.sentiment) {
+                addSentimentIndicator(additionalData.sentiment, messageDiv);
+            }
+            if (additionalData.analysis) {
+                addAnalysisPanel(additionalData.analysis, messageDiv);
+                updateSidebarSymptoms();
+            }
+            if (additionalData.humor) {
+                addHumorResponse(additionalData.humor, messageDiv);
+            }
+            if (additionalData.prescription) {
+                addPrescriptionCard(additionalData.prescription, messageDiv);
+            }
+            if (additionalData.emergency) {
+                addEmergencyAlert(messageDiv);
+            }
+            if (additionalData.products) {
+                addProductsCard(additionalData.products, messageDiv);
+            }
+        }
+
+        function updateSidebarSymptoms() {
+            const list = document.getElementById('sidebar-symptoms-list');
+            const score = document.getElementById('sidebar-health-score');
+            
+            if (conversationState.userSymptoms.length > 0) {
+                list.innerHTML = conversationState.userSymptoms.map(s => `
+                    <span class="symptom-tag">${s}</span>
+                `).join('');
+                
+                // Dynamically reduce health score as more symptoms identified
+                const currentScore = Math.max(40, 100 - (conversationState.userSymptoms.length * 10));
+                score.innerText = `${currentScore}/100`;
+                score.style.color = currentScore < 60 ? 'var(--danger)' : (currentScore < 80 ? 'var(--warning)' : 'var(--success)');
+            }
+        }
+
+        function addSentimentIndicator(sentiment, messageDiv) {
+            const indicator = document.createElement('div');
+            indicator.className = `sentiment-indicator ${sentiment.type}`;
+            indicator.innerHTML = `
+                <span class="sentiment-emoji">${sentiment.emoji}</span>
+                <span>${sentiment.text}</span>
+            `;
+            messageDiv.querySelector('.message-content').appendChild(indicator);
+        }
+
+        function addAnalysisPanel(analysis, messageDiv) {
+            const panel = document.createElement('div');
+            panel.className = 'analysis-panel active';
+            
+            let content = analysis;
+            if (typeof analysis === 'object') {
+                content = `
+                    <table class="medical-table">
+                        <thead>
+                            <tr>
+                                <th>Assessment Parameter</th>
+                                <th>Finding</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>🔍 Condition</td><td><strong>${analysis.symptom}</strong></td></tr>
+                            <tr><td>⚖️ Severity</td><td><span style="color: ${analysis.severityColor}">${analysis.severity}</span></td></tr>
+                            <tr><td>⏱️ Duration</td><td>${analysis.duration}</td></tr>
+                            <tr><td>🧬 Common Causes</td><td>${analysis.causes}</td></tr>
+                        </tbody>
+                    </table>
+                    <div style="padding: 10px; background: rgba(255,255,255,0.5); border-radius: 8px; margin-top: 10px;">
+                        <strong>Dr. Kedi\'s Advice:</strong><br>${analysis.advice}
+                    </div>
+                `;
+            }
+
+            panel.innerHTML = `
+                <div class="analysis-header">
+                    <span>🩺</span>
+                    <span>Medical Assessment Report</span>
+                </div>
+                <div class="analysis-content">${content}</div>
+            `;
+            messageDiv.querySelector('.message-content').appendChild(panel);
+        }
+
+        function addHumorResponse(humor, messageDiv) {
+            const response = document.createElement('div');
+            response.className = 'humor-response active';
+            response.innerHTML = `
+                <span class="humor-emoji">😄</span>
+                <span class="humor-text">${humor}</span>
+            `;
+            messageDiv.querySelector('.message-content').appendChild(response);
+        }
+
+        function addPrescriptionCard(prescription, messageDiv) {
+            const card = document.createElement('div');
+            card.className = 'prescription-card active';
+            card.innerHTML = `
+                <div class="prescription-header">
+                    <span>💊</span>
+                    <span>Professional Kedi Prescription</span>
+                </div>
+                <div class="prescription-content">
+                    <table class="medical-table" style="background: rgba(255,255,255,0.8);">
+                        <thead>
+                            <tr>
+                                <th>Product / Medication</th>
+                                <th>Dosage Instructions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${prescription.map(med => `
+                                <tr>
+                                    <td><strong>${med.name}</strong></td>
+                                    <td>${med.dosage}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            messageDiv.querySelector('.message-content').appendChild(card);
+        }
+
+        function addEmergencyAlert(messageDiv) {
+            const alert = document.createElement('div');
+            alert.className = 'emergency-alert active';
+            alert.innerHTML = `
+                <div class="emergency-content">
+                    <span class="emergency-emoji">🚨</span>
+                    <span>Emergency: Please seek immediate medical attention!</span>
+                </div>
+            `;
+            messageDiv.querySelector('.message-content').appendChild(alert);
+        }
+
+        function addProductsCard(products, messageDiv) {
+            if (!products || products.length === 0) return;
+            const card = document.createElement('div');
+            card.className = 'analysis-panel active'; // Reusing styling for consistency
+            card.style.background = 'linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 100%)';
+            card.style.borderColor = '#bae6fd';
+            
+            let productsHTML = `
+                <div class="analysis-header" style="color: #0369a1">
+                    <span>🌟</span>
+                    <span>Recommended Kedi Solutions</span>
+                </div>
+                <div class="analysis-content">
+                    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+            `;
+
+            products.forEach(p => {
+                const piPrice = (p.price / 314159).toFixed(8);
+                productsHTML += `
+                    <div style="background: white; padding: 10px; border-radius: 10px; border: 1px solid #e0f2fe; display: flex; gap: 10px; align-items: center;">
+                        <img src="${p.image_url}" width="40" height="40" style="border-radius: 5px;">
+                        <div style="flex: 1">
+                            <div style="font-weight: 600; font-size: 13px;">${p.name}</div>
+                            <div style="font-size: 11px; color: #0369a1">π${piPrice}</div>
+                        </div>
+                        <button class="quick-action-btn" style="padding: 4px 8px; font-size: 10px;" onclick="window.open('kedi-products.html', '_blank')">View</button>
+                    </div>
+                `;
+            });
+
+            productsHTML += `
+                    </div>
+                    <p style="font-size: 11px; margin-top: 10px; opacity: 0.8;">These natural supplements are formulated specifically to support your recovery for these symptoms.</p>
+                </div>
+            `;
+            card.innerHTML = productsHTML;
+            messageDiv.querySelector('.message-content').appendChild(card);
+        }
+
+        // Product Engine Integration
+        window.loadProducts = async function() {
+            try {
+                const response = await fetch('assets/js/data/products.json');
+                return await response.json();
+            } catch (e) {
+                console.error("Failed to fetch Kedi products", e);
+                return [];
+            }
+        }
+
+        async function getVectorSimilarity(textA, textB) {
+            const wordsA = textA.toLowerCase().split(/\W+/);
+            const wordsB = textB.toLowerCase().split(/\W+/);
+            const intersection = wordsA.filter(w => wordsB.includes(w));
+            return intersection.length / Math.max(wordsA.length, wordsB.length);
+        }
+
+        window.recommendProducts = async function(query) {
+            const products = await window.loadProducts();
+            const results = [];
+            for (const p of products) {
+                let score = 0;
+                for (const tag of (p.symptom_tags || [])) {
+                    const sim = await getVectorSimilarity(query, tag);
+                    if (sim > score) score = sim;
+                    if (query.toLowerCase().includes(tag.toLowerCase())) score += 0.5;
+                }
+                const descSim = await getVectorSimilarity(query, p.description || "");
+                score = Math.max(score, descSim * 0.7);
+                if (score > 0.1) results.push({ product: p, score });
+            }
+            return results.sort((a,b) => b.score - a.score).map(r => r.product).slice(0, 3);
+        }
+
+        // AI Processing Functions
+        async function processUserMessage(message) {
+            const lowerMessage = message.toLowerCase();
+
+            // Check for emergency conditions first
+            if (checkEmergencyConditions(lowerMessage)) {
+                return handleEmergencyResponse(lowerMessage);
+            }
+
+            // Detect humor
+            if (detectHumor(lowerMessage)) {
+                conversationState.personalityTraits.humorous = true;
+                return handleHumorResponse(lowerMessage);
+            }
+
+            // Detect emotions
+            const emotion = detectEmotion(lowerMessage);
+            if (emotion) {
+                conversationState.emotionalState = emotion.type;
+                return handleEmotionalResponse(emotion, lowerMessage);
+            }
+
+            // Check for medical symptoms
+            const symptom = detectSymptoms(lowerMessage);
+            if (symptom) {
+                const result = handleSymptomResponse(symptom, lowerMessage);
+                // Dynamically fetch Kedi products
+                result.products = await window.recommendProducts(lowerMessage);
+                return result;
+            }
+
+            // Handle general health questions
+            if (isHealthQuery(lowerMessage)) {
+                return handleHealthQuery(lowerMessage);
+            }
+
+            // Handle mood check
+            if (isMoodCheck(lowerMessage)) {
+                return handleMoodCheck();
+            }
+
+            // Default response
+            return handleGeneralResponse(lowerMessage);
+        }
+
+        function checkEmergencyConditions(message) {
+            const emergencyKeywords = [
+                'chest pain', 'difficulty breathing', 'can\'t breathe', 'severe pain',
+                'suicide', 'kill myself', 'end my life', 'bleeding heavily',
+                'unconscious', 'fainting', 'stroke symptoms', 'heart attack'
+            ];
+
+            return emergencyKeywords.some(keyword => message.includes(keyword));
+        }
+
+        function handleEmergencyResponse(message) {
+            const emergencyResponses = {
+                'chest pain': '🚨 This could be a heart emergency! Call emergency services immediately! Don\'t wait!',
+                'difficulty breathing': '🚨 Breathing difficulty requires immediate attention! Call emergency services now!',
+                'suicide': '🚨 Please call emergency services or a suicide hotline immediately! Your life matters! Please reach out for help!',
+                'default': '🚨 This sounds serious! Please seek immediate medical attention! Call emergency services or go to the nearest emergency room!'
+            };
+
+            for (const [condition, response] of Object.entries(emergencyResponses)) {
+                if (message.includes(condition)) {
+                    return {
+                        text: response,
+                        emergency: true,
+                        sentiment: { type: 'negative', emoji: '🚨', text: 'Emergency detected' }
+                    };
+                }
+            }
+
+            return {
+                text: emergencyResponses.default,
+                emergency: true,
+                sentiment: { type: 'negative', emoji: '🚨', text: 'Emergency detected' }
+            };
+        }
+
+        function detectHumor(message) {
+            return emotionDatabase.humor.indicators.some(indicator => message.includes(indicator));
+        }
+
+        function handleHumorResponse(message) {
+            const humorResponse = emotionDatabase.humor.responses[
+                Math.floor(Math.random() * emotionDatabase.humor.responses.length)
+            ];
+
+            return {
+                text: humorResponse,
+                humor: humorResponse,
+                sentiment: { type: 'positive', emoji: '😄', text: 'Humor detected' }
+            };
+        }
+
+        function detectEmotion(message) {
+            for (const [emotion, data] of Object.entries(emotionDatabase.emotions)) {
+                if (data.indicators.some(indicator => message.includes(indicator))) {
+                    return { type: emotion, ...data };
+                }
+            }
+            return null;
+        }
+
+        function handleEmotionalResponse(emotion, message) {
+            const emotionalResponses = {
+                happy: {
+                    text: `I'm so glad to hear you're feeling ${emotion.indicators[0]}! 😊 Positive emotions are great for your health. Keep spreading that joy!`,
+                    analysis: 'Positive emotional state detected. This contributes to better overall health and faster recovery.',
+                    sentiment: { type: 'positive', emoji: '😊', text: 'Positive mood' }
+                },
+                sad: {
+                    text: `I sense you're feeling down. 😔 It's okay to feel this way. Remember, seeking help is a sign of strength. Would you like to talk about what's bothering you?`,
+                    analysis: 'Signs of sadness detected. Emotional support recommended. Consider talking to friends, family, or a mental health professional.',
+                    sentiment: { type: 'negative', emoji: '😔', text: 'Feeling sad' }
+                },
+                anxious: {
+                    text: `I can hear the anxiety in your message. 😰 Let's take a deep breath together. Try this: inhale for 4 counts, hold for 4, exhale for 4. Repeat 3 times. Better?`,
+                    analysis: 'Anxiety detected. Stress management techniques recommended. Consider breathing exercises, meditation, or professional help.',
+                    sentiment: { type: 'concerned', emoji: '😰', text: 'Anxious' }
+                },
+                angry: {
+                    text: `I understand you're feeling angry. 😠 Anger is a valid emotion, but let's find healthy ways to express it. Would you like to talk about what's making you upset?`,
+                    analysis: 'Anger detected. Emotional regulation techniques recommended. Physical exercise or talking can help process these feelings.',
+                    sentiment: { type: 'negative', emoji: '😠', text: 'Feeling angry' }
+                },
+                tired: {
+                    text: `You sound exhausted. 😴 Fatigue can affect both physical and mental health. Are you getting enough sleep? How many hours are you averaging?`,
+                    analysis: 'Fatigue detected. Sleep assessment recommended. Consider lifestyle factors affecting energy levels.',
+                    sentiment: { type: 'concerned', emoji: '😴', text: 'Feeling tired' }
+                }
+            };
+
+            const response = emotionalResponses[emotion.type] || emotionalResponses.confused;
+            return response;
+        }
+
+        function detectSymptoms(message) {
+            for (const [key, symptom] of Object.entries(medicalDatabase.symptoms)) {
+                if (message.includes(key) || symptom.causes.some(cause => message.includes(cause))) {
+                    if (!conversationState.userSymptoms.includes(symptom.name)) {
+                        conversationState.userSymptoms.push(symptom.name);
+                    }
+                    return { type: key, ...symptom };
+                }
+            }
+
+            // Fallback: Check in the quiz prescription database
+            for (const [key, details] of Object.entries(medicalDatabase.prescriptions)) {
+                if (message.includes(key.replace('_', ' '))) {
+                    const symptomName = key.replace('_', ' ').charAt(0).toUpperCase() + key.replace('_', ' ').slice(1);
+                    if (!conversationState.userSymptoms.includes(symptomName)) {
+                        conversationState.userSymptoms.push(symptomName);
+                    }
+                    return {
+                        type: key,
+                        name: symptomName,
+                        causes: ['environmental', 'lifestyle', 'physiological'],
+                        advice: 'Consider a balanced diet and regular Kedi wellness supplements.',
+                        prescriptions: [{ name: details[0], dosage: details[1], duration: details[2] }]
+                    };
+                }
+            }
+            return null;
+        }
+
+        function handleSymptomResponse(symptom, message) {
+            // Extract severity
+            let severity = 'moderate';
+            let severityColor = 'var(--warning)';
+            if (message.includes('mild') || message.includes('slight')) {
+                severity = 'mild';
+                severityColor = 'var(--success)';
+            }
+            if (message.includes('severe') || message.includes('bad') || message.includes('terrible')) {
+                severity = 'severe';
+                severityColor = 'var(--danger)';
+            }
+
+            // Extract duration if mentioned
+            let duration = 'recent';
+            if (message.includes('days')) duration = 'days';
+            if (message.includes('weeks')) duration = 'weeks';
+            if (message.includes('months')) duration = 'months';
+
+            let responseText = `I understand you're experiencing ${symptom.name} with ${severity} severity. Based on our AI medical database, I've prepared a detailed assessment report and a professional prescription plan below.`;
+
+            const result = {
+                text: responseText,
+                analysis: {
+                    symptom: symptom.name,
+                    severity: severity.charAt(0).toUpperCase() + severity.slice(1),
+                    severityColor: severityColor,
+                    duration: duration.charAt(0).toUpperCase() + duration.slice(1),
+                    causes: symptom.causes.slice(0, 3).join(', '),
+                    advice: symptom.advice
+                },
+                prescription: symptom.prescriptions,
+                sentiment: { type: severity === 'severe' ? 'concerned' : 'concerned', emoji: '🏥', text: 'Medical analysis complete' }
+            };
+
+            // Check for emergency conditions first
+            if (severity === 'severe' || symptom.redFlags) {
+                result.isEmergency = true;
+                result.emergencyAdvice = `⚠️ **RED FLAG ALERT**: Please check for: ${symptom.redFlags || 'extreme pain, bleeding, or fainting'}. Seek clinical attention immediately.`;
+            }
+
+            // Check if follow-up questions needed
+            if (!message.includes('week') && !message.includes('month')) {
+                result.followUp = true;
+            } else {
+                // Post-prescription flow: ask to continue or end
+                result.sessionClosure = true;
+            }
+
+            return result;
+        }
+
+        function isHealthQuery(message) {
+            const healthKeywords = ['health', 'medical', 'symptoms', 'diagnosis', 'treatment', 'medicine', 'doctor', 'hospital'];
+            return healthKeywords.some(keyword => message.includes(keyword));
+        }
+
+        function handleHealthQuery(message) {
+            const responses = {
+                default: `I'm here to help with your health concerns! Please describe your symptoms, and I'll provide a comprehensive analysis and recommendations.\n\nYou can also use the quick actions below for common issues, or tell me specifically what's bothering you.`
+            };
+
+            return {
+                text: responses.default,
+                sentiment: { type: 'neutral', emoji: '🤖', text: 'Ready to help' }
+            };
+        }
+
+        function isMoodCheck(message) {
+            return message.includes('how are you') || message.includes('feeling') || message.includes('mood');
+        }
+
+        function handleMoodCheck() {
+            return {
+                text: `I'm functioning optimally! Thank you for asking! 😊 My circuits are running smoothly, and I'm here to help you feel your best too.\n\nBut more importantly, how are YOU feeling today? Any health concerns I can help with?`,
+                sentiment: { type: 'positive', emoji: '😊', text: 'Feeling good' }
+            };
+        }
+
+        function handleGeneralResponse(message) {
+            const generalResponses = [
+                `I'm here to help with your health! Could you tell me more about what's concerning you?`,
+                `I'd love to assist you! Please describe your symptoms or health questions in detail.`,
+                `I'm ready to help! What health issues are you experiencing today?`,
+                `Let me help you feel better! Please share your symptoms or health concerns.`
+            ];
+
+            return {
+                text: generalResponses[Math.floor(Math.random() * generalResponses.length)],
+                sentiment: { type: 'neutral', emoji: '🤖', text: 'Ready to assist' }
+            };
+        }
+
+        // Message Sending
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+
+            if (!message) return;
+
+            // Add user message
+            addMessage(message, true);
+            input.value = '';
+
+            // Show typing indicator
+            showTypingIndicator();
+
+            // Process and respond
+            setTimeout(async () => {
+                const response = await processUserMessage(message);
+                hideTypingIndicator();
+                addMessage(response.text, false, response);
+
+                // Follow-up if needed
+                if (response.followUp) {
+                    setTimeout(() => {
+                        showTypingIndicator();
+                        setTimeout(() => {
+                            hideTypingIndicator();
+                            addMessage(
+                                `How long have you been experiencing these symptoms? This will help me provide better treatment recommendations.`,
+                                false,
+                                { sentiment: { type: 'neutral', emoji: '🤔', text: 'Follow-up question' } }
+                            );
+                        }, 1500);
+                    }, 1000);
+                } else if (response.sessionClosure) {
+                    // Session Closure Prompts
+                    setTimeout(() => {
+                        showTypingIndicator();
+                        setTimeout(() => {
+                            hideTypingIndicator();
+                            addMessage(
+                                `Would you like to analyze another symptom, or shall we conclude this consultation? I'm here if you have more questions!`,
+                                false,
+                                { 
+                                    sentiment: { type: 'positive', emoji: '🤝', text: 'Patient support' },
+                                    analysis: "Session stabilization. Offering further assistance or session closure."
+                                }
+                            );
+                        }, 2000);
+                    }, 1500);
+                }
+            }, 1500 + Math.random() * 1000);
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        // Quick Actions
+        function initQuickActions() {
+            const container = document.getElementById('dynamic-quick-actions');
+            if (!container) return;
+            
+            container.innerHTML = '';
+            // Generate chips from medical database symptoms
+            Object.entries(medicalDatabase.symptoms).slice(0, 15).forEach(([key, data]) => {
+                const button = document.createElement('button');
+                button.className = 'quick-action-btn';
+                button.onclick = () => quickAction(key);
+                button.innerHTML = `<span>${data.icon}</span> ${data.name}`;
+                container.appendChild(button);
+            });
+        }
+
+        function quickAction(type) {
+            const input = document.getElementById('chat-input');
+            const data = medicalDatabase.symptoms[type];
+            
+            if (data && data.query) {
+                input.value = data.query;
+            } else {
+                // Fallback for special cases like 'mood' or 'checkup'
+                const specialQueries = {
+                    mood: 'How are you feeling today Dr. Kedi?',
+                    checkup: 'I need a general health checkup and analysis',
+                    check_all: 'Tell me about all available Kedi health packs'
+                };
+                input.value = specialQueries[type] || `I have concerns about ${type}`;
+            }
+            sendMessage();
+        }
+
+        // Voice Recording (Simulated)
+        let isRecording = false;
+        function toggleVoiceRecording() {
+            const voiceBtn = document.getElementById('voice-btn');
+            const recordingIndicator = document.getElementById('voice-recording');
+
+            if (!isRecording) {
+                isRecording = true;
+                voiceBtn.classList.add('recording');
+                voiceBtn.innerHTML = '⏹️';
+                recordingIndicator.classList.add('active');
+
+                // Simulate recording for 3 seconds
+                setTimeout(() => {
+                    stopVoiceRecording();
+                    const simulatedMessage = 'Voice input detected: "I have been feeling tired and dizzy lately"';
+                    addMessage(simulatedMessage, true);
+                    setTimeout(() => {
+                        const response = processUserMessage('tired dizzy');
+                        addMessage(response.text, false, response);
+                    }, 1500);
+                }, 3000);
+            } else {
+                stopVoiceRecording();
+            }
+        }
+
+        function stopVoiceRecording() {
+            isRecording = false;
+            const voiceBtn = document.getElementById('voice-btn');
+            const recordingIndicator = document.getElementById('voice-recording');
+
+            voiceBtn.classList.remove('recording');
+            voiceBtn.innerHTML = '🎤';
+            recordingIndicator.classList.remove('active');
+        }
+
+        // File Attachment (Simulated)
+        function attachFile() {
+            addMessage('📎 File attachment feature coming soon!', false, {
+                sentiment: { type: 'info', emoji: 'ℹ️', text: 'Feature in development' }
+            });
+        }
+
+        // UI Functions
+        function showTypingIndicator() {
+            document.getElementById('typing-indicator').classList.add('active');
+        }
+
+        function hideTypingIndicator() {
+            document.getElementById('typing-indicator').classList.remove('active');
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Focus input on load
+            document.getElementById('chat-input').focus();
+            
+            // Initialize Dynamic Quick Action Chips
+            initQuickActions();
+
+            // Simulate initial greeting after 2 seconds
+            setTimeout(() => {
+                showTypingIndicator();
+                setTimeout(() => {
+                    hideTypingIndicator();
+                    addMessage(
+                        `Remember, I'm constantly learning and improving! The more you interact with me, the better I can understand and assist you. 😊`,
+                        false,
+                        { sentiment: { type: 'positive', emoji: '🤖', text: 'AI learning' } }
+                    );
+                }, 2000);
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>

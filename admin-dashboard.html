@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Kedi Health</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome.all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0b9b3e;
+            --primary-dark: #087a31;
+            --bg: #f4f7f6;
+            --side-bg: #1a202c;
+            --card-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            margin: 0;
+            display: flex;
+        }
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            height: 100vh;
+            background: var(--side-bg);
+            color: #fff;
+            position: fixed;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar h2 {
+            font-size: 22px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sidebar h2 i { color: var(--primary); }
+        .nav-link {
+            color: #a0aec0;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s;
+            text-decoration: none !important;
+        }
+        .nav-link:hover, .nav-link.active {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+        .nav-link.active i { color: var(--primary); }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 260px;
+            flex: 1;
+            padding: 30px;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .stat-card .val {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 5px 0;
+        }
+        .stat-card .label { color: #718096; font-size: 14px; }
+        .stat-card .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: rgba(11, 155, 62, 0.1);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        /* Tables & Lists */
+        .data-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        .data-card h3 { font-size: 18px; margin-bottom: 20px; }
+        .table { margin: 0; }
+        .table th { border-top: none; color: #718096; font-weight: 600; font-size: 13px; }
+        .table td { vertical-align: middle; font-size: 14px; padding: 15px 10px; }
+        .status-pill {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .status-paid { background: #e6fffa; color: #2ecc71; }
+        .status-pending { background: #fffaf0; color: #f6ad55; }
+
+        @media (max-width: 991px) {
+            .sidebar { 
+                transform: translateX(-100%); 
+                z-index: 1000;
+                transition: transform 0.3s ease;
+            }
+            .sidebar.active { transform: translateX(0); }
+            .main-content { margin-left: 0; padding: 15px; }
+            .header-top { 
+                flex-direction: column; 
+                align-items: flex-start; 
+                gap: 15px; 
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Sidebar Toggle Overlay */
+        .sidebar-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+        .sidebar-overlay.active { display: block; }
+
+        /* Toggle Button */
+        .sidebar-toggle {
+            display: none;
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 991px) {
+            .sidebar-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar" id="sidebar">
+        <h2><i class="fas fa-clinic-medical"></i> Kedi Admin</h2>
+        <nav>
+            <a href="#" class="nav-link active" data-tab="dashboard"><i class="fas fa-th-large"></i> Dashboard</a>
+            <a href="index.html" class="nav-link"><i class="fas fa-external-link-alt"></i> View Site</a>
+            <a href="#" class="nav-link" data-tab="orders"><i class="fas fa-shopping-bag"></i> Orders</a>
+            <a href="#" class="nav-link" data-tab="abandoned"><i class="fas fa-cart-arrow-down"></i> Abandoned Carts</a>
+            <a href="#" class="nav-link" data-tab="payments"><i class="fas fa-credit-card"></i> Payments</a>
+            <a href="#" class="nav-link" data-tab="users"><i class="fas fa-users"></i> Users</a>
+            <a href="#" class="nav-link" data-tab="settings"><i class="fas fa-cog"></i> Settings</a>
+        </nav>
+        <div style="margin-top:auto; padding-top:20px;">
+            <a href="#" class="nav-link text-danger"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header-top">
+            <div class="d-flex align-items-center gap-3">
+                <button class="sidebar-toggle" id="sidebarBtn"><i class="fas fa-bars"></i></button>
+                <h1 id="page-title">Dashboard Overview</h1>
+            </div>
+            <div class="user-info d-flex align-items-center gap-3">
+                <div class="text-end d-none d-md-block">
+                    <div id="admin-time" style="font-weight: 700; font-size: 16px; color: var(--primary);"></div>
+                    <div id="admin-date" style="font-size: 11px; color: #718096; text-transform: uppercase; letter-spacing: 1px;"></div>
+                </div>
+                <div class="avatar" style="width:42px;height:42px;background:linear-gradient(135deg, var(--primary), var(--primary-dark));border-radius:10px;color:white;display:flex;align-items:center;justify-content:center;font-weight:bold;box-shadow:0 4px 12px rgba(11,155,62,0.2);">AD</div>
+            </div>
+        </div>
+
+        <!-- Tab: Dashboard -->
+        <div id="tab-dashboard" class="admin-tab-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div>
+                        <div class="label">Total Orders</div>
+                        <div class="val" id="total-orders">0</div>
+                        <div class="text-success small"><i class="fas fa-arrow-up"></i> 12% increase</div>
+                    </div>
+                    <div class="icon"><i class="fas fa-shopping-bag"></i></div>
+                </div>
+                <div class="stat-card">
+                    <div>
+                        <div class="label">Active Users</div>
+                        <div class="val" id="active-users">1,204</div>
+                        <div class="text-success small"><i class="fas fa-arrow-up"></i> 5% target reached</div>
+                    </div>
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                </div>
+                <div class="stat-card">
+                    <div>
+                        <div class="label">Abandoned Carts</div>
+                        <div class="val text-warning" id="abandoned-count">0</div>
+                        <div class="text-muted small">Potential Revenue: π ...</div>
+                    </div>
+                    <div class="icon" style="background:rgba(245,158,11,0.1);color:#f59e0b;"><i class="fas fa-shopping-cart"></i></div>
+                </div>
+                <div class="stat-card">
+                    <div>
+                        <div class="label">Revenue</div>
+                        <div class="val">π 2.45M</div>
+                        <div class="text-muted small">Updated just now</div>
+                    </div>
+                    <div class="icon"><i class="fas fa-chart-line"></i></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="data-card">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3>Recent Transactions</h3>
+                            <button class="btn btn-sm btn-link text-primary" onclick="switchTab('orders')">View All</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Patient/User</th>
+                                        <th>Items</th>
+                                        <th>Currency</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tx-body">
+                                    <!-- Dynamic -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="data-card">
+                        <h3>Site Performance</h3>
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between mb-1 small">
+                                <span>Cart Conversion</span>
+                                <span>64%</span>
+                            </div>
+                            <div class="progress" style="height: 6px; border-radius: 10px;">
+                                <div class="progress-bar bg-success" style="width: 64%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between mb-1 small">
+                                <span>AI Assessments</span>
+                                <span>89%</span>
+                            </div>
+                            <div class="progress" style="height: 6px; border-radius: 10px;">
+                                <div class="progress-bar bg-primary" style="width: 89%"></div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="pt-2">
+                            <button class="btn btn-outline-success w-100 mb-2" onclick="alert('System healthy!')"><i class="fas fa-shield-alt"></i> Run System Diagnostics</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab: Abandoned Carts -->
+        <div id="tab-abandoned" class="admin-tab-content d-none">
+            <div class="data-card">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h3>Abandoned Shopping Carts</h3>
+                        <p class="text-muted small">Users who added items but did not complete checkout.</p>
+                    </div>
+                    <button class="btn btn-sm btn-outline-primary" onclick="alert('Reminder notifications sent!')">Send Bulk Reminders</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Cart ID</th>
+                                <th>Items</th>
+                                <th>Value</th>
+                                <th>Time Idle</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="abandoned-body">
+                            <!-- Dynamic -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab: Payments -->
+        <div id="tab-payments" class="admin-tab-content d-none">
+            <div class="data-card">
+                <h3>Payment Gateway Management</h3>
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-3">
+                        <div class="p-3 border rounded">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5>Pi Network Payment</h5>
+                                <span class="status-pill status-paid">ACTIVE</span>
+                            </div>
+                            <p class="text-muted small">Current Wallet: GDSK...F4S2</p>
+                            <button class="btn btn-sm btn-outline-secondary mt-2">Edit Settings</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="p-3 border rounded">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5>WhatsApp Ordering</h5>
+                                <span class="status-pill status-paid">ACTIVE</span>
+                            </div>
+                            <p class="text-muted small">Global Receiver: +234 811 427 0136</p>
+                            <button class="btn btn-sm btn-outline-secondary mt-2">Update Number</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Placeholder Tabs -->
+        <!-- Tab: Orders -->
+        <div id="tab-orders" class="admin-tab-content d-none">
+            <div class="data-card">
+                <h3>Customer Orders</h3>
+                <p class="text-muted small mb-4">View and manage all purchase requests received via WhatsApp.</p>
+                <div id="orders-full-list"></div>
+            </div>
+        </div>
+        
+        <!-- Tab: Users -->
+        <div id="tab-users" class="admin-tab-content d-none">
+            <div class="data-card">
+                <h3>User Information</h3>
+                <p class="text-muted small mb-4">Manage guest sessions and user interactions across the site.</p>
+                <div class="alert alert-info">User account creation is currently handled automatically during checkout.</div>
+            </div>
+        </div>
+        <!-- Tab: Settings -->
+        <div id="tab-settings" class="admin-tab-content d-none">
+            <div class="data-card">
+                <h3>Global Website Settings</h3>
+                <p class="text-muted small mb-4">Control basic identity and communication details for the entire platform.</p>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label small font-weight-bold">Website Name</label>
+                        <input type="text" id="set-site-name" class="form-control" value="Kedi Health Solutions">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label small font-weight-bold">Primary Support WhatsApp</label>
+                        <input type="text" id="set-site-phone" class="form-control" value="+234 811 427 0136">
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-primary" onclick="updateSiteSettings()">Save Global Configuration</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ── Navigation & Tab System ──
+        function switchTab(tabId) {
+            // Update Navigation UI
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if(link.dataset.tab === tabId) link.classList.add('active');
+            });
+
+            // Update Tab Content
+            document.querySelectorAll('.admin-tab-content').forEach(content => {
+                content.classList.add('d-none');
+            });
+            const targetContent = document.getElementById('tab-' + tabId);
+            if(targetContent) targetContent.classList.remove('d-none');
+
+            // Update Title
+            const labels = {
+                'dashboard': 'Dashboard Overview',
+                'orders': 'Orders Management',
+                'abandoned': 'Abandoned Carts',
+                'payments': 'Payment Systems',
+                'users': 'User Management',
+                'settings': 'Global Settings'
+            };
+            document.getElementById('page-title').textContent = labels[tabId] || 'Admin';
+
+            // Re-sync data when switching
+            syncDashboard();
+        }
+
+        // ── Data Synchronization ──
+        function syncDashboard() {
+            const cart = JSON.parse(localStorage.getItem('kedi_cart_v2') || '[]');
+            const wish = JSON.parse(localStorage.getItem('kedi_wishlist_v2') || '[]');
+            const orders = JSON.parse(localStorage.getItem('kedi_orders_v2') || '[]');
+            const abandoned = JSON.parse(localStorage.getItem('kedi_abandoned_v2') || '[]');
+            
+            document.getElementById('total-orders').textContent = orders.length;
+            document.getElementById('wishlist-total').textContent = wish.length;
+            const abandonVal = document.getElementById('abandoned-count');
+            if(abandonVal) abandonVal.textContent = abandoned.length;
+
+            // Render Recent Transactions (from orders)
+            const txBody = document.getElementById('tx-body');
+            if(txBody) {
+                txBody.innerHTML = orders.length > 0 ? orders.slice(0,5).map((ord) => `
+                    <tr>
+                        <td>${ord.customer?.firstName || 'Guest'}</td>
+                        <td>${ord.items?.length || 0} items</td>
+                        <td>₦${Number(ord.total || 0).toLocaleString()}</td>
+                        <td><span class="status-pill status-pending">${ord.status || 'NEW'}</span></td>
+                        <td><button class="btn btn-sm btn-outline-success" onclick="alert('Viewing: ${ord.id}')">View</button></td>
+                    </tr>
+                `).join('') : '<tr><td colspan="5" class="text-center py-5 text-muted">No recent confirmed orders found</td></tr>';
+            }
+
+            // Render Abandoned Carts
+            const abandonBody = document.getElementById('abandoned-body');
+            if(abandonBody) {
+                abandonBody.innerHTML = abandoned.length > 0 ? abandoned.map((cartItem, idx) => `
+                    <tr>
+                        <td>CART_RECOV_${idx}</td>
+                        <td>${cartItem.items?.length || 0} Products</td>
+                        <td>₦${Number(cartItem.total || 0).toLocaleString()}</td>
+                        <td>${timeAgo(cartItem.abandonedAt)}</td>
+                        <td><button class="btn btn-sm btn-success" onclick="recoverCart('${idx}')">Recover Mode</button></td>
+                    </tr>
+                `).join('') : '<tr><td colspan="5" class="text-center py-5 text-muted">No abandoned carts currently tracked</td></tr>';
+            }
+
+            // Render Orders Management Tab
+            const ordersBody = document.querySelector('#tab-orders .data-card');
+            if(ordersBody) {
+                ordersBody.innerHTML = `
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3>Recent Transactions</h3>
+                        <div class="d-flex gap-2">
+                            <input type="text" id="order-search" class="form-control form-control-sm" placeholder="Search customer..." style="width:200px;">
+                            <select id="status-filter" class="form-select form-select-sm" style="width:120px;">
+                                <option value="ALL">All Status</option>
+                                <option value="PENDING">Pending</option>
+                                <option value="PAID">Paid</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Value</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${orders.length > 0 ? orders.map(o => `
+                                    <tr>
+                                        <td><code>${o.id}</code></td>
+                                        <td>${o.customer?.firstName} ${o.customer?.lastName}<br><small>${o.customer?.phone}</small></td>
+                                        <td>₦${Number(o.total).toLocaleString()}</td>
+                                        <td>${new Date(o.createdAt).toLocaleDateString()}</td>
+                                        <td><span class="status-pill status-pending">${o.status}</span></td>
+                                    </tr>
+                                `).join('') : '<tr><td colspan="5" class="text-center py-5 text-muted">No orders found in kedi_orders_v2 database</td></tr>'}
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+            }
+        }
+
+        function timeAgo(date) {
+            if(!date) return 'Recently';
+            const seconds = Math.floor((new Date() - new Date(date)) / 1000);
+            if(seconds < 60) return 'Just now';
+            const mins = Math.floor(seconds/60);
+            if(mins < 60) return mins + 'm ago';
+            return Math.floor(mins/60) + 'h ago';
+        }
+
+        // ── Clock System (Nigeria Time WAT) ──
+        function updateClock() {
+            const now = new Date();
+            const timeOptions = { timeZone: 'Africa/Lagos', hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const dateOptions = { timeZone: 'Africa/Lagos', weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' };
+            
+            document.getElementById('admin-time').textContent = now.toLocaleTimeString('en-GB', timeOptions);
+            document.getElementById('admin-date').textContent = now.toLocaleDateString('en-NG', dateOptions);
+        }
+
+        function recoverCart(idx) {
+            const abandoned = JSON.parse(localStorage.getItem('kedi_abandoned_v2') || '[]');
+            const cart = abandoned[idx];
+            if(!cart) return;
+            const list = cart.items.map(i => `• ${i.name} (x${i.qty})`).join('\n');
+            const confirmed = confirm(`📦 CART SUMMARY (ID: ${idx})\n\n${list}\n\nTotal: ₦${Number(cart.total).toLocaleString()}\n\nRestore this cart to your current session?`);
+            if(confirmed) {
+                localStorage.setItem('kedi_cart_v2', JSON.stringify(cart.items));
+                alert('Cart restored! View on site to see changes.');
+            }
+        }
+        function updateSiteSettings() {
+            const name = document.getElementById('set-site-name').value;
+            const phone = document.getElementById('set-site-phone').value;
+            localStorage.setItem('kedi_site_settings', JSON.stringify({ name, phone }));
+            alert('Site settings updated globally!');
+        }
+        function confirmPayment(txId) {
+            alert(`Payment CONFIRMED for Transaction ${txId}. Order marked for Priority Shipping.`);
+        }
+
+        // ── Initialization ──
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(updateClock, 1000);
+            updateClock();
+            syncDashboard();
+
+            // Bind Sidebar Links
+            document.querySelectorAll('.nav-link[data-tab]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    switchTab(link.dataset.tab);
+                });
+            });
+
+            // Mobile Toggle
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            const btn = document.getElementById('sidebarBtn');
+
+            const toggleSidebar = () => {
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            };
+
+            if(btn) btn.addEventListener('click', toggleSidebar);
+            if(overlay) overlay.addEventListener('click', toggleSidebar);
+        });
+    </script>
+</body>
+</html>
